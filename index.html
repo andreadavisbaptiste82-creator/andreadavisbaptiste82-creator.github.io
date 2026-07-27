@@ -1,34 +1,68 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Andrea Davis-Baptiste is a Learning Innovation Leader specializing in AI enablement, enterprise learning strategy, leadership development, and technology transformation." name="description"/><meta content="#111318" name="theme-color"/><meta content="Andrea Davis-Baptiste | Learning Innovation Leader" property="og:title"/><meta content="Executive portfolio featuring enterprise learning strategy, AI workforce readiness, leadership development, technology enablement, and responsible-AI learning." property="og:description"/><meta content="website" property="og:type"/><meta content="assets/andrea-headshot.png" property="og:image"/><meta content="summary" name="twitter:card"/>
-<title>Andrea Davis-Baptiste — Building the Future of Learning</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrea Davis-Baptiste | Enterprise Learning, AI Enablement & Workforce Transformation</title>
+<meta name="description" content="Andrea Davis-Baptiste is an enterprise learning, AI enablement, and workforce-transformation leader delivering adoption frameworks, leadership-development programs, and technology-enablement strategy at scale.">
+<link rel="canonical" href="https://andreadavisbaptiste82-creator.github.io/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Andrea Davis-Baptiste | Enterprise Learning, AI Enablement & Workforce Transformation">
+<meta property="og:description" content="Enterprise learning, AI enablement, and workforce-transformation leadership: adoption frameworks, leadership development, and technology-enablement strategy at scale.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://andreadavisbaptiste82-creator.github.io/">
+<meta property="og:image" content="https://andreadavisbaptiste82-creator.github.io/assets/adb-logo.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Andrea Davis-Baptiste | Enterprise Learning, AI Enablement & Workforce Transformation">
+<meta name="twitter:description" content="Enterprise learning, AI enablement, and workforce-transformation leadership: adoption frameworks, leadership development, and technology-enablement strategy at scale.">
+<meta name="twitter:image" content="https://andreadavisbaptiste82-creator.github.io/assets/adb-logo.png">
+
+<!-- Favicon (existing brand logo asset) -->
+<link rel="icon" type="image/png" href="assets/adb-logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!--
+  ANALYTICS (not configured):
+  If Google Analytics 4 is desired, add the standard gtag.js loader here, e.g.:
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX'); // <- replace with the real GA4 Measurement ID
+    </script>
+  If Microsoft Clarity is desired, add the Clarity snippet here with the real Clarity project ID.
+  The data-track event script near the end of this page (see "LIGHTWEIGHT EVENT TRACKING")
+  will automatically start sending events through gtag() once it exists on the page —
+  no other changes are required.
+-->
 <style>
 
   /* ============ TOKENS ============ */
   :root{
-    --ink:#F5F7FA;
-    --ink-soft:#BEC4CE;
-    --ink-faint:#858D99;
-    --paper:#111318;
-    --paper-raised:#171A20;
-    --card:#1D2128;
-    --panel:#222731;
-    --gold:#16C7C1;
-    --gold-deep:#0B8F91;
-    --gold-text:#0B8F91;
+    --ink:#F4F6F7;
+    --ink-soft:#B8C1C5;
+    --ink-faint:#89949A;
+    --paper:#101418;
+    --paper-raised:#161C21;
+    --card:#1C242A;
+    --panel:#222C33;
+    --gold:#5FAAA5;
+    --gold-deep:#3D7F7B;
+    --gold-text:#5FAAA5;
     --on-accent:#0B0D10;
-    --navy-deep:#0D0F13;
-    --navy-mid:#1D2128;
-    --line:#343A46;
-    --line-dark:#3F4756;
+    --navy-deep:#0D1114;
+    --navy-mid:#1C242A;
+    --line:#344149;
+    --line-dark:#42515A;
     --warm-white:#F3F1E9;
-    --glow:22,199,193;
+    --glow:95,170,165;
 
     --display: 'Newsreader', serif;
     --body: 'IBM Plex Sans', sans-serif;
@@ -93,7 +127,7 @@
   /* ============ TOP NAV ============ */
   .topnav{
     position:sticky; top:0; z-index:40;
-    background:rgba(17,19,24,0.88);
+    background:rgba(16,20,24,0.88);
     backdrop-filter:saturate(140%) blur(10px);
     border-bottom:1px solid var(--line);
   }
@@ -139,7 +173,55 @@
     transition:color .2s ease;
   }
   .toplinks a:hover{ color:var(--gold-text); }
-  @media (max-width:860px){ .toplinks{display:none;} }
+  .nav-toggle{
+    display:none;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:5px;
+    width:38px; height:38px;
+    padding:0;
+    background:transparent;
+    border:1px solid var(--line);
+    border-radius:7px;
+    cursor:pointer;
+  }
+  .nav-toggle-bar{
+    display:block;
+    width:18px; height:2px;
+    background:var(--ink);
+    border-radius:2px;
+    transition:transform .2s ease, opacity .2s ease;
+  }
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2){ opacity:0; }
+  .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+  @media (max-width:860px){
+    .topnav-inner{ position:relative; }
+    .nav-toggle{ display:flex; }
+    .toplinks{
+      display:flex;
+      flex-direction:column;
+      gap:0;
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      margin:0;
+      background:var(--paper-raised);
+      border-bottom:1px solid var(--line);
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .25s ease;
+    }
+    .toplinks.is-open{ max-height:420px; }
+    .toplinks li{ border-top:1px solid var(--line); }
+    .toplinks a{
+      display:block;
+      padding:15px 22px;
+      font-size:13px;
+    }
+  }
 
   /* ============ HERO ============ */
   .hero{
@@ -297,17 +379,19 @@
     flex-wrap:wrap;
     gap:12px;
   }
-  .hero-cta .btn, .hero-cta .btn.ghost, .showcase-cta.btn, .showcase-cta.btn.ghost{ padding:12px 20px; font-size:11.5px; }
+  .hero-cta .btn, .hero-cta .btn.ghost, .showcase-cta.btn, .showcase-cta.btn.ghost{ padding:10px 18px; font-size:11px; }
   .hero-meta{
     margin-top:44px;
     display:flex;
-    gap:36px;
+    flex-wrap:wrap;
+    gap:18px 36px;
     font-family:var(--mono);
     font-size:12px;
     letter-spacing:0.06em;
     text-transform:uppercase;
     color:var(--ink-faint);
   }
+  .hero-meta > div{ max-width:190px; }
   .hero-meta strong{
     display:block;
     font-family:var(--display);
@@ -327,6 +411,48 @@
     border:none; border-top:1px solid var(--line); margin:0;
   }
 
+  /* ============ ENTERPRISE IMPACT ============ */
+  .impact{ background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .impact-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+  }
+  @media (max-width:900px){ .impact-grid{ grid-template-columns:repeat(2, 1fr); } }
+  @media (max-width:560px){ .impact-grid{ grid-template-columns:1fr; } }
+  .impact-card{
+    border:1px solid var(--line);
+    border-radius:9px;
+    background:var(--card);
+    padding:22px 20px;
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .impact-card:hover{ border-color:var(--gold); transform:translateY(-2px); }
+  .impact-number{
+    font-family:var(--display);
+    font-size:clamp(28px,3.4vw,38px);
+    font-weight:500;
+    color:var(--gold-text);
+    margin:0 0 8px;
+    letter-spacing:-0.01em;
+  }
+  .impact-label{
+    font-family:var(--body);
+    font-size:13.5px;
+    line-height:1.5;
+    color:var(--ink-soft);
+    margin:0;
+    letter-spacing:0.01em;
+  }
+  .impact-note{
+    margin:26px 0 0;
+    max-width:760px;
+    font-family:var(--mono);
+    font-size:12.5px;
+    line-height:1.6;
+    color:var(--ink-faint);
+  }
+
   /* ============ PHILOSOPHY ============ */
   .philosophy{ background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
   .philosophy-quote{
@@ -341,15 +467,15 @@
   .philosophy-grid{
     display:grid;
     grid-template-columns:repeat(5, 1fr);
-    gap:20px;
+    gap:14px;
     align-items:start;
   }
   @media (max-width:980px){ .philosophy-grid{ grid-template-columns:repeat(2, 1fr); } }
   @media (max-width:560px){ .philosophy-grid{ grid-template-columns:1fr; } }
   .philosophy-list{ display:contents; }
   .philosophy-list li{
-    display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px;
-    padding:22px 14px;
+    display:flex; flex-direction:column; align-items:center; text-align:center; gap:8px;
+    padding:16px 12px;
     border:1px solid var(--line);
     border-radius:9px;
     background:var(--card);
@@ -390,11 +516,6 @@
   /* ============ ARCHITECTURE DIAGRAM ============ */
   .arch{
     text-align:center;
-    --gold:#A94DB3;
-    --gold-deep:#713A7C;
-    --gold-text:#C97AD0;
-    --on-accent:#F5F7FA;
-    --glow:169,77,179;
   }
   .arch .section-head{ margin-left:auto; margin-right:auto; text-align:center; }
   .arch-divider{
@@ -484,7 +605,7 @@
   }
 
   /* ============ SERIES INTRO ============ */
-  .series-intro{ padding-bottom:0; --gold:#3F6FAE; --gold-deep:#2F5688; --gold-text:#6E9BD3; --on-accent:#F5F7FA; }
+  .series-intro{ padding-bottom:0; }
 
   /* ============ SPINE NAV ============ */
   .spine{
@@ -538,11 +659,6 @@
     opacity:0;
     transform:translateY(18px);
     transition:opacity .7s ease, transform .7s ease;
-    --gold:#3F6FAE;
-    --gold-deep:#2F5688;
-    --gold-text:#6E9BD3;
-    --on-accent:#F5F7FA;
-    --glow:63,111,174;
   }
   .reel.visible{ opacity:1; transform:translateY(0); }
   .reel-grid{
@@ -632,6 +748,61 @@
 
   /* media */
   .reel-media{ position:relative; }
+
+  /* ============ MORE VIDEOS (expandable) ============ */
+  .more-videos{
+    margin-top:20px;
+    border:1px solid var(--line-dark);
+    border-radius:12px;
+    background:var(--paper-raised);
+    overflow:hidden;
+  }
+  .more-videos > summary{
+    cursor:pointer;
+    list-style:none;
+    padding:20px 24px;
+    font-family:var(--mono);
+    font-size:13.5px;
+    font-weight:600;
+    letter-spacing:0.03em;
+    color:var(--ink);
+    display:flex;
+    align-items:center;
+    gap:12px;
+    transition:background .2s ease;
+  }
+  .more-videos > summary::-webkit-details-marker{ display:none; }
+  .more-videos > summary:hover{ background:var(--card); }
+  .more-videos > summary:focus-visible{ outline:2px solid var(--gold-deep); outline-offset:-2px; }
+  .more-videos > summary::before{
+    content:"+";
+    flex:none;
+    width:22px; height:22px;
+    border-radius:50%;
+    background:var(--gold-deep);
+    color:var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    font-size:16px;
+    line-height:1;
+  }
+  .more-videos[open] > summary::before{ content:"\2212"; }
+  .more-videos > summary .summary-note{
+    font-family:var(--body);
+    font-weight:400;
+    font-size:12.5px;
+    color:var(--ink-faint);
+    margin-left:auto;
+    text-transform:none;
+    letter-spacing:0;
+  }
+  .more-videos-inner{
+    padding:0 24px 8px;
+    border-top:1px solid var(--line-dark);
+  }
+  .more-videos-inner .reel:first-of-type{ border-top:none; }
+  @media (max-width:640px){
+    .more-videos > summary .summary-note{ display:none; }
+  }
   .media-frame{
     border:1.5px solid var(--gold);
     border-radius:6px;
@@ -646,7 +817,8 @@
   }
   .media-frame:hover{ box-shadow:0 24px 56px -22px rgba(var(--glow),0.28); }
   .media-frame video{ width:100%; height:100%; object-fit:cover; }
-  .media-frame.landscape{ aspect-ratio:16/9; max-width:320px; }
+  #graceVideo{ object-fit:contain; background:var(--navy-deep); }
+  .media-frame.landscape{ aspect-ratio:16/9; max-width:280px; }
 
   .placeholder{
     width:100%; height:100%;
@@ -691,13 +863,13 @@
   }
 
   /* ============ FEATURED PROJECT ============ */
-  .project{ padding:68px 0; border-top:1px solid var(--line); --gold:#C83E4D; --gold-deep:#962B38; --gold-text:#D05A67; --on-accent:#F5F7FA; --glow:200,62,77; }
+  .project{ padding:68px 0; border-top:1px solid var(--line); }
   .project-card{
     border:1px solid var(--line-dark);
     border-top:3px solid var(--gold);
     border-radius:8px;
     background:
-      radial-gradient(circle at 100% 0%, rgba(200,62,77,0.09), transparent 42%),
+      radial-gradient(circle at 100% 0%, rgba(var(--glow),0.09), transparent 42%),
       var(--panel);
     padding:64px;
     position:relative;
@@ -764,7 +936,7 @@
     line-height:1.4;
   }
 
-  .project-block{ margin-top:42px; }
+  .project-block{ margin-top:34px; }
   .project-details{
     margin-top:42px;
     border:1px solid var(--line-dark);
@@ -847,7 +1019,7 @@
   .card-grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
-    gap:20px;
+    gap:14px;
   }
   .card-grid.cols-2{ grid-template-columns:repeat(2, 1fr); }
   .card-grid.cols-4{ grid-template-columns:repeat(4, 1fr); }
@@ -857,19 +1029,19 @@
   .mini-card{
     border:1px solid var(--line);
     border-radius:4px;
-    padding:18px 18px;
+    padding:13px 14px;
     background:var(--card);
   }
   .mini-card .mc-title{
     font-family:var(--body);
     font-weight:600;
-    font-size:14px;
+    font-size:13.5px;
     color:var(--ink);
-    margin:0 0 8px;
+    margin:0 0 5px;
   }
   .mini-card .mc-desc{
-    font-size:13.5px;
-    line-height:1.55;
+    font-size:13px;
+    line-height:1.5;
     color:var(--ink-soft);
     margin:0;
   }
@@ -917,7 +1089,7 @@
   .dual-showcase{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:28px;
+    gap:18px;
     margin-top:8px;
   }
   @media (max-width:820px){ .dual-showcase{ grid-template-columns:1fr; } }
@@ -925,7 +1097,7 @@
     border:1px solid var(--line);
     border-radius:8px;
     background:var(--panel);
-    padding:24px;
+    padding:18px;
     display:flex;
     flex-direction:column;
   }
@@ -978,8 +1150,8 @@
   /* Case study structure */
   .case-block{
     border-left:2px solid var(--gold);
-    padding-left:20px;
-    margin-bottom:28px;
+    padding-left:18px;
+    margin-bottom:20px;
   }
   .case-block:last-child{ margin-bottom:0; }
   .case-label{
@@ -1057,11 +1229,11 @@
     background:var(--card);
   }
 
-  .capabilities{ background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); --gold:#8E4ACE; --gold-deep:#6B3AA0; --gold-text:#AA6BE4; --on-accent:#F5F7FA; --glow:142,74,206; }
+  .capabilities{ background:var(--paper-raised); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
   .cap-grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
-    gap:28px;
+    gap:18px;
   }
   @media (max-width:980px){ .cap-grid{ grid-template-columns:repeat(2, 1fr); } }
   @media (max-width:600px){ .cap-grid{ grid-template-columns:1fr; } }
@@ -1069,7 +1241,7 @@
     background:var(--card);
     border:1px solid var(--line);
     border-radius:8px;
-    padding:24px 24px 26px;
+    padding:18px 18px 20px;
     transition:border-color .2s ease;
   }
   .cap-block:hover{ border-color:var(--gold); }
@@ -1121,11 +1293,6 @@
     background:linear-gradient(135deg, var(--navy-deep), var(--paper-raised));
     color:var(--ink);
     position:relative;
-    --gold:#8E4ACE;
-    --gold-deep:#6B3AA0;
-    --gold-text:#AA6BE4;
-    --on-accent:#F5F7FA;
-    --glow:142,74,206;
     overflow:hidden;
   }
   .vision::before{
@@ -1177,18 +1344,13 @@
     background:var(--paper);
     border-top:1px solid var(--line);
     border-bottom:1px solid var(--line);
-    --gold:#6F3FA0;
-    --gold-deep:#5A3280;
-    --gold-text:#C89BEA;
-    --on-accent:#F5F7FA;
-    --glow:111,63,160;
   }
   .research .section-head{ max-width:720px; margin-left:auto; margin-right:auto; text-align:center; }
   .research .lead{ color:var(--ink-soft); font-size:16px; line-height:1.7; max-width:720px; margin:0 auto 44px; text-align:center; }
   .research-grid{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
-    gap:22px;
+    gap:16px;
   }
   @media (max-width:900px){
     .research-grid{ grid-template-columns:1fr 1fr; }
@@ -1202,7 +1364,7 @@
     background:var(--card);
     border:1px solid var(--line-dark);
     border-radius:10px;
-    padding:26px 24px;
+    padding:19px 18px;
     display:flex;
     flex-direction:column;
     transition:border-color .2s ease;
@@ -1263,12 +1425,92 @@
     display:inline-block;
     width:6px; height:6px;
     border-radius:50%;
-    background:#16C7C1;
+    background:var(--gold);
     margin-top:18px;
   }
 
+  /* ============ STRATEGY ASSETS ============ */
+  .strategy-assets{
+    background:var(--paper);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+  .assets-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+  }
+  @media (max-width:820px){ .assets-grid{ grid-template-columns:1fr; } }
+  .asset-card{
+    border:1px solid var(--line);
+    border-radius:10px;
+    background:var(--card);
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    transition:border-color .2s ease;
+  }
+  .asset-card:hover{ border-color:var(--gold); }
+  .asset-cover{
+    width:100%;
+    aspect-ratio:850/1100;
+    background:var(--navy-deep);
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .asset-cover img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+  }
+  .asset-body{
+    padding:22px 22px 24px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+  }
+  .asset-badge{
+    display:inline-block;
+    align-self:flex-start;
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--gold-text);
+    border:1px solid var(--line-dark);
+    border-radius:20px;
+    padding:4px 11px;
+    margin-bottom:12px;
+  }
+  .asset-card h3{
+    font-family:var(--display);
+    font-size:20px;
+    font-weight:600;
+    color:var(--ink);
+    margin:0 0 10px;
+    line-height:1.3;
+  }
+  .asset-desc{
+    color:var(--ink-soft);
+    font-size:14px;
+    line-height:1.65;
+    margin:0 0 14px;
+  }
+  .asset-card .tag-row{ margin-bottom:18px; }
+  .asset-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:auto;
+  }
+  .asset-actions .btn, .asset-actions .btn.ghost{ padding:10px 18px; font-size:11px; }
+
   /* ============ CLOSING ============ */
-  .closing{ text-align:left; --gold:#16C7C1; --gold-deep:#0B8F91; --gold-text:#0B8F91; --on-accent:#0B0D10; --glow:22,199,193; }
+  .closing{ text-align:left; }
   .closing-inner{ max-width:720px; }
   .closing p{
     color:var(--ink-soft);
@@ -1314,11 +1556,11 @@
   .btn{
     display:inline-block;
     font-family:var(--mono);
-    font-size:12.5px;
+    font-size:12px;
     letter-spacing:0.06em;
     text-transform:uppercase;
     text-decoration:none;
-    padding:14px 26px;
+    padding:11px 20px;
     border-radius:5px;
     background:var(--gold);
     color:var(--on-accent);
@@ -1393,809 +1635,923 @@
   .footer-links a svg{ width:15px; height:15px; flex:none; }
 
 </style>
-<style id="mobileNavStyles">
-.menu-toggle{display:none;width:42px;height:38px;border:1px solid var(--line-dark);border-radius:6px;background:var(--card);padding:8px 9px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px;color:var(--ink);}
-.menu-toggle span{display:block;width:20px;height:2px;border-radius:2px;background:currentColor;transition:transform .2s ease,opacity .2s ease;}
-.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
-.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-.mobile-menu{display:none;border-top:1px solid var(--line);background:rgba(17,19,24,.98);}
-.mobile-menu.open{display:block;}
-.mobile-menu-inner{display:grid;grid-template-columns:1fr 1fr;padding-top:12px;padding-bottom:16px;gap:4px 12px;}
-.mobile-menu a{display:block;padding:11px 10px;border-radius:5px;text-decoration:none;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);}
-.mobile-menu a:hover,.mobile-menu a:focus-visible{color:var(--gold-text);background:var(--card);}
-@media (max-width:860px){.menu-toggle{display:flex}.topnav-inner{gap:14px}.brand .nav-logo{max-width:180px}.mobile-menu-inner{padding-left:22px;padding-right:22px}}
-@media (max-width:420px){.mobile-menu-inner{grid-template-columns:1fr}.brand .nav-logo{max-width:155px;height:26px}}
-@media (min-width:861px){.mobile-menu{display:none!important}}
-</style></head>
+</head>
 <body>
+
 <nav class="topnav">
-<div class="topnav-inner">
-<a aria-label="Andrea Davis-Baptiste portfolio - back to top" class="brand" href="#top"><img alt="Andrea Davis-Baptiste ADB logo" class="nav-logo" decoding="async" src="assets/adb-logo.png"/>ANDREA <b>DAVIS-BAPTISTE</b></a>
-<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Open navigation menu" class="menu-toggle" id="menuToggle" type="button"><span></span><span></span><span></span></button><ul aria-label="Primary navigation" class="toplinks">
-<li><a href="#philosophy">Philosophy</a></li>
-<li><a href="#framework">Framework</a></li>
-<li><a href="#series">Series</a></li>
-<li><a href="#project-ai-guide">AI Project</a></li>
-<li><a href="#capabilities">Capabilities</a></li>
-<li><a href="#connect">Connect</a></li>
-</ul>
-</div>
-<div aria-label="Mobile navigation" class="mobile-menu" id="mobileMenu"><div class="wrap mobile-menu-inner"><a href="#philosophy">Philosophy</a><a href="#framework">Framework</a><a href="#series">Series</a><a href="#project-ai-guide">AI Project</a><a href="#capabilities">Capabilities</a><a href="#research">Research</a><a href="#connect">Connect</a></div></div></nav>
+  <div class="topnav-inner">
+    <a class="brand" href="#top"><picture><source type="image/webp" srcset="assets/adb-logo.webp"><img class="nav-logo" src="assets/adb-logo.png" alt="Andrea Davis-Baptiste ADB logo" width="2038" height="465"></picture>ANDREA <b>DAVIS-BAPTISTE</b></a>
+    <ul class="toplinks" id="toplinks">
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#strategy-assets">Selected Work</a></li>
+      <li><a href="#project-ai-guide">AI Project</a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#series">Perspectives</a></li>
+      <li><a href="#framework">Framework</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#connect">Connect</a></li>
+    </ul>
+    <button type="button" class="nav-toggle" id="navToggle" aria-controls="toplinks" aria-expanded="false" aria-label="Open menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+  </div>
+</nav>
+
 <!-- SPINE NAV -->
-<div aria-label="Series navigation" class="spine" id="spine"></div>
+<div class="spine" id="spine" aria-label="Series navigation"></div>
+
 <!-- HERO -->
 <section class="hero" id="top">
-<!-- Andrea hero headshot -->
-<div class="wrap hero-grid">
-<div class="hero-text">
-<p class="eyebrow">AI · Learning · Leadership · Impact</p>
-<h1 class="hero-name">Andrea Davis-Baptiste</h1>
-<p class="hero-role">Learning Innovation Leader</p>
-<p class="hero-lede">I design learning experiences that help people navigate change, build capability, adopt emerging technology, and prepare organizations for what comes next.</p>
-<p class="hero-tags"><span class="accent-word">AI Enablement</span> · Learning Strategy · Leadership Development · Technology Transformation</p>
-<div class="hero-pillars">
-<div class="hero-pillar">
-<span aria-hidden="true" class="hp-icon">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3.2"></circle><path d="M12 3v3M12 18v3M21 12h-3M6 12H3"></path></svg>
-</span>
-<p class="hp-title">Strategic Insight</p>
-<p class="hp-desc">Turning complex organizational needs into practical learning strategies.</p>
-</div>
-<div class="hero-pillar">
-<span aria-hidden="true" class="hp-icon">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M20.5 8.5c0-2.2-1.8-4-4-4-1.4 0-2.7.7-3.4 1.9C12.4 5.2 11.1 4.5 9.7 4.5c-2.2 0-4 1.8-4 4 0 5 6.8 9 6.8 9s6-4 6-9z"></path><circle cx="12" cy="9.2" r="1.6"></circle></svg>
-</span>
-<p class="hp-title">Human-Centered Design</p>
-<p class="hp-desc">Creating experiences that support people, trust, and adoption.</p>
-</div>
-<div class="hero-pillar">
-<span aria-hidden="true" class="hp-icon">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 19h16M6 19V11M11 19V6M16 19v-9M19 19V3"></path></svg>
-</span>
-<p class="hp-title">Sustainable Impact</p>
-<p class="hp-desc">Connecting learning solutions to performance and measurable outcomes.</p>
-</div>
-</div>
-<div class="hero-cta">
-<a class="btn" href="#philosophy">Explore My Work</a>
-<a class="btn ghost" href="#series">View the Video Series</a>
-<a class="btn ghost" href="#project-ai-guide">Watch the AI Prototype</a>
-<a aria-label="View Andrea Davis-Baptiste's résumé" class="btn ghost" href="assets/Andrea-Davis-Baptiste-Resume.pdf" rel="noopener noreferrer" target="_blank">View Résumé</a>
-</div>
-<div class="hero-meta">
-<div><strong>07</strong>Video Series</div>
-<div><strong>01</strong>Connected Framework</div>
-<div><strong>16+</strong>Core Competencies</div>
-</div>
-</div>
-<div class="hero-photo">
-<div class="hero-photo-frame">
-<img alt="Portrait of Andrea Davis-Baptiste, Learning Innovation Leader" fetchpriority="high" loading="eager" src="assets/andrea-headshot.png"/>
-</div>
-<div class="hero-photo-accent"></div>
-<p class="hero-quote">“The future of learning is not about replacing people with AI. It is about empowering people to do their best work with it.”</p>
-</div>
-</div>
+  <!-- Andrea hero headshot -->
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">AI &middot; Learning &middot; Leadership &middot; Impact</p>
+      <h1 class="hero-name">Andrea Davis-Baptiste</h1>
+      <p class="hero-role">Enterprise Learning &amp; Workforce Enablement Leader</p>
+      <p class="hero-lede">I help complex organizations translate technology and business change into scalable learning, stronger workforce adoption, and measurable performance.</p>
+      <p class="hero-tags"><span class="accent-word">AI-Enabled Learning Strategy</span> &middot; Leadership Enablement &middot; Technology Adoption &middot; Learning Operations</p>
+
+      <div class="hero-pillars">
+        <div class="hero-pillar">
+          <span class="hp-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M21 12h-3M6 12H3"/></svg>
+          </span>
+          <p class="hp-title">Strategic Insight</p>
+          <p class="hp-desc">Turning complex organizational needs into practical learning strategies.</p>
+        </div>
+        <div class="hero-pillar">
+          <span class="hp-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 8.5c0-2.2-1.8-4-4-4-1.4 0-2.7.7-3.4 1.9C12.4 5.2 11.1 4.5 9.7 4.5c-2.2 0-4 1.8-4 4 0 5 6.8 9 6.8 9s6-4 6-9z"/><circle cx="12" cy="9.2" r="1.6"/></svg>
+          </span>
+          <p class="hp-title">Human-Centered Design</p>
+          <p class="hp-desc">Creating experiences that support people, trust, and adoption.</p>
+        </div>
+        <div class="hero-pillar">
+          <span class="hp-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M6 19V11M11 19V6M16 19v-9M19 19V3"/></svg>
+          </span>
+          <p class="hp-title">Sustainable Impact</p>
+          <p class="hp-desc">Connecting learning solutions to performance and measurable outcomes.</p>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a class="btn" href="#strategy-assets">View Selected Work</a>
+        <a class="btn ghost" href="assets/Andrea-Davis-Baptiste-Resume.pdf" target="_blank" rel="noopener noreferrer" data-track="resume-view" aria-label="View Andrea Davis-Baptiste's résumé">View Résumé</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>17+</strong>Years — Learning and technology leadership</div>
+        <div><strong>600+</strong>Schools — Enterprise-scale ecosystem</div>
+        <div><strong>1,000+</strong>People — Educators and stakeholders enabled</div>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="hero-photo-frame">
+        <picture><source type="image/webp" srcset="assets/andrea-headshot.webp"><img src="assets/andrea-headshot.png" alt="Portrait of Andrea Davis-Baptiste, Enterprise Learning & Workforce Enablement Leader" width="500" height="500"></picture>
+      </div>
+      <div class="hero-photo-accent"></div>
+      <p class="hero-quote">&ldquo;The future of learning is not about replacing people with AI. It is about empowering people to do their best work with it.&rdquo;</p>
+    </div>
+  </div>
 </section>
+
+<!-- ENTERPRISE IMPACT -->
+<section class="impact" id="impact">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Enterprise Impact</p>
+      <h2>Measurable outcomes at enterprise scale</h2>
+    </div>
+    <p class="impact-transfer" style="max-width:720px; margin:-8px 0 28px; color:var(--ink-soft); font-size:15px; line-height:1.6;">Enterprise learning and technology enablement delivered within a complex, distributed 600-school organization.</p>
+    <div class="impact-grid">
+      <div class="impact-card">
+        <p class="impact-number">600+</p>
+        <p class="impact-label">Schools supported across a districtwide enterprise</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-number">35+</p>
+        <p class="impact-label">Schools directly supported through professional learning</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-number">1,000+</p>
+        <p class="impact-label">Educators and stakeholders enabled</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-number">40%</p>
+        <p class="impact-label">Increase in technology adoption</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-number">25%</p>
+        <p class="impact-label">Improvement in knowledge retention</p>
+      </div>
+      <div class="impact-card">
+        <p class="impact-number">25%</p>
+        <p class="impact-label">Increase in LMS engagement</p>
+      </div>
+    </div>
+    <p class="impact-note">Selected outcomes reflect program and platform data associated with Andrea&rsquo;s enterprise learning and technology-enablement work.</p>
+  </div>
+</section>
+
 <!-- PHILOSOPHY -->
-<section class="philosophy" id="philosophy">
-<div class="wrap">
-<p class="eyebrow">Portfolio Philosophy — Core Belief</p>
-<p class="philosophy-quote">Every learning initiative should begin with a business challenge — not with designing training.</p>
-<hr class="philosophy-divider"/>
-<div class="philosophy-grid">
-<ul class="philosophy-list">
-<li>
-<span aria-hidden="true" class="p-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 20h16M7 20V10M12 20V4M17 20v-7"></path></svg></span>
-          Improve performance
-        </li>
-<li>
-<span aria-hidden="true" class="p-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="12" rx="1.5" width="18" x="3" y="4"></rect><path d="M8 20h8M12 16v4"></path></svg></span>
-          Increase technology adoption
-        </li>
-<li>
-<span aria-hidden="true" class="p-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><path d="M2 20c0-3.3 3-5.5 7-5.5s7 2.2 7 5.5"></path><circle cx="17" cy="8" r="2.4"></circle><path d="M17 12.5c2.8.2 5 2.2 5 5"></path></svg></span>
-          Develop leadership capability
-        </li>
-<li>
-<span aria-hidden="true" class="p-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M17 7L7 17M7 7v10h10"></path></svg></span>
-          Prepare employees for change
-        </li>
-<li>
-<span aria-hidden="true" class="p-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 2c3 3 4.5 6.5 4.5 10a4.5 4.5 0 0 1-9 0c0-3.5 1.5-7 4.5-10z"></path><path d="M9 15.5c-2 .8-3 2.2-3 4.5m9-4.5c2 .8 3 2.2 3 4.5"></path></svg></span>
-          Accelerate business transformation
-        </li>
-</ul>
-<p class="philosophy-close">Learning becomes <b>the strategy</b> — not the product.</p>
-</div>
-</div>
-</section>
-<!-- ARCHITECTURE -->
-<section class="arch" id="framework">
-<div class="wrap">
-<div class="section-head">
-<p class="eyebrow">Portfolio Architecture</p>
-<h2>One framework. Five strategic stages. One business outcome.</h2>
-<hr class="arch-divider"/>
-</div>
-<div class="flow" id="archFlow">
-<div class="flow-stage"><span class="stage-num">1</span><span aria-hidden="true" class="stage-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg></span>Business Challenge</div>
-<span class="flow-arrow">→</span>
-<div class="flow-stage"><span class="stage-num">2</span><span aria-hidden="true" class="stage-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="3.5"></circle><path d="M12 3v3M12 18v3M21 12h-3M6 12H3"></path></svg></span>Learning Strategy</div>
-<span class="flow-arrow">→</span>
-<div class="flow-stage"><span class="stage-num">3</span><span aria-hidden="true" class="stage-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><path d="M2 20c0-3.3 3-5.5 7-5.5s7 2.2 7 5.5"></path><circle cx="17" cy="8" r="2.4"></circle><path d="M17 12.5c2.8.2 5 2.2 5 5"></path></svg></span>Leadership Development</div>
-<span class="flow-arrow">→</span>
-<div class="flow-stage"><span class="stage-num">4</span><span aria-hidden="true" class="stage-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="12" rx="1.5" width="18" x="3" y="4"></rect><path d="M8 20h8M12 16v4"></path></svg></span>Technology Enablement</div>
-<span class="flow-arrow">→</span>
-<div class="flow-stage"><span class="stage-num">5</span><span aria-hidden="true" class="stage-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 2a5 5 0 0 1 5 5c0 2.2-1 3.3-2 4.3-.7.7-1 1.2-1 2.2v1H10v-1c0-1-.3-1.5-1-2.2-1-1-2-2.1-2-4.3a5 5 0 0 1 5-5z"></path><path d="M9.5 21h5M10 18.5h4"></path></svg></span>AI Workforce Readiness</div>
-<span class="flow-arrow">→</span>
-<div class="flow-stage final"><span class="stage-num">6</span><span aria-hidden="true" class="stage-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M8 4h8v4a4 4 0 0 1-8 0V4z"></path><path d="M4 6h4M16 6h4M4 6c0 2.5 1.5 4 4 4M20 6c0 2.5-1.5 4-4 4M12 14v3M9 21h6"></path></svg></span>Business Performance</div>
-</div>
-<p class="arch-caption">Every portfolio experience connects learning strategy to organizational performance.</p>
-</div>
-</section>
-<!-- SERIES INTRO -->
-<section class="series-intro" id="series">
-<div class="wrap">
-<div class="section-head">
-<p class="eyebrow">Executive Portfolio Series</p>
-<h2>Seven videos. One connected argument for what learning leadership looks like now.</h2>
-</div>
-</div>
-</section>
-<!-- REELS -->
-<div class="wrap">
-<article class="reel" data-index="1" id="video-1">
-<div class="reel-grid">
-<div class="reel-media">
-<div class="media-frame landscape">
-<video aria-label="Video 1: Executive Introduction - Who is Andrea Davis-Baptiste?" controls="" playsinline="" poster="assets/video-01-poster.jpg" preload="metadata">
-<source src="assets/video-01-welcome.mp4" type="video/mp4"/>
-            Your browser does not support embedded video. <a href="assets/video-01-welcome.mp4">Download the video</a>.
-          </video>
-</div>
-<p class="media-caption">Video 01 · Executive Introduction</p>
-</div>
-<div class="reel-content">
-<p class="reel-eyebrow"><b>Video 01 / 07</b> — Executive Introduction</p>
-<h3 class="reel-title">Who is Andrea Davis-Baptiste?</h3>
-<p class="reel-label">Purpose</p>
-<p class="reel-text">Introduce my professional philosophy and establish my executive brand.</p>
-<p class="reel-label">Demonstrated Competencies</p>
-<div class="tag-row">
-<span class="tag">Executive Presence</span>
-<span class="tag">Professional Communication</span>
-<span class="tag">Strategic Learning</span>
-<span class="tag">Personal Brand</span>
-<span class="tag">Vision</span>
-</div>
-<div class="key-message">Learning exists to solve organizational problems — not simply transfer knowledge.</div>
-</div>
-</div>
-</article>
-<article class="reel reverse" data-index="2" id="video-2">
-<div class="reel-grid">
-<div class="reel-media">
-<div class="media-frame landscape">
-<video aria-label="Video 2: Learning Strategy - Training is only one possible solution" controls="" playsinline="" poster="assets/video-02-poster.jpg" preload="metadata">
-<source src="assets/video-02-learning-strategy.mp4" type="video/mp4"/>
-            Your browser does not support embedded video. <a href="assets/video-02-learning-strategy.mp4">Download the video</a>.
-          </video>
-</div>
-<p class="media-caption">Video 02 · Learning Strategy</p>
-</div>
-<div class="reel-content">
-<p class="reel-eyebrow"><b>Video 02 / 07</b> — Learning Strategy</p>
-<h3 class="reel-title">Training is only one possible solution.</h3>
-<p class="reel-label">Business Challenge</p>
-<p class="reel-text">Organizations frequently implement training before identifying the true business problem.</p>
-<p class="reel-label">Demonstrated Competencies</p>
-<div class="tag-row">
-<span class="tag">Needs Assessment</span>
-<span class="tag">Performance Consulting</span>
-<span class="tag">Learning Strategy</span>
-<span class="tag">Stakeholder Alignment</span>
-<span class="tag">Instructional Design</span>
-<span class="tag">Business Alignment</span>
-</div>
-<p class="reel-label">Featured Topics</p>
-<div class="tag-row">
-<span class="tag">Performance Analysis</span>
-<span class="tag">Root Cause Analysis</span>
-<span class="tag">Business Partnership</span>
-<span class="tag">Learning Ecosystems</span>
-<span class="tag">Strategic Alignment</span>
-</div>
-<div class="key-message">Learning leaders must first diagnose performance challenges before recommending interventions.</div>
-</div>
-</div>
-</article>
-<article class="reel" data-index="3" id="video-3">
-<div class="reel-grid">
-<div class="reel-media">
-<div class="media-frame landscape">
-<video aria-label="Video 3: Leadership Development - Developing people, not merely managers" controls="" playsinline="" poster="assets/video-03-poster.jpg" preload="metadata">
-<source src="assets/video-03-leadership-development.mp4" type="video/mp4"/>
-            Your browser does not support embedded video. <a href="assets/video-03-leadership-development.mp4">Download the video</a>.
-          </video>
-</div>
-<p class="media-caption">Video 03 · Leadership Development</p>
-</div>
-<div class="reel-content">
-<p class="reel-eyebrow"><b>Video 03 / 07</b> — Leadership Development</p>
-<h3 class="reel-title">Developing people, not merely managers.</h3>
-<p class="reel-label">Business Challenge</p>
-<p class="reel-text">Organizations require leaders capable of navigating continual change.</p>
-<p class="reel-label">Demonstrated Competencies</p>
-<div class="tag-row">
-<span class="tag">Leadership Development</span>
-<span class="tag">Capability Building</span>
-<span class="tag">Executive Coaching</span>
-<span class="tag">Performance Improvement</span>
-<span class="tag">Change Leadership</span>
-</div>
-<p class="reel-label">Leadership Framework</p>
-<div class="mini-flow">
-<span class="step">Build Confidence</span><span class="arrow">→</span>
-<span class="step">Develop Capability</span><span class="arrow">→</span>
-<span class="step">Inspire Teams</span><span class="arrow">→</span>
-<span class="step">Drive Performance</span><span class="arrow">→</span>
-<span class="step">Lead Change</span><span class="arrow">→</span>
-<span class="step">Achieve Results</span>
-</div>
-<div class="key-message">Leadership development strengthens organizational capability by developing people — not merely managers.</div>
-</div>
-</div>
-</article>
-<article class="reel reverse" data-index="4" id="video-4">
-<div class="reel-grid">
-<div class="reel-media">
-<div class="media-frame landscape">
-<video aria-label="Video 4: AI Workforce Readiness - Technology succeeds when people are prepared" controls="" playsinline="" poster="assets/video-04-poster.jpg" preload="metadata">
-<source src="assets/video-04-ai-workforce-readiness.mp4" type="video/mp4"/>
-            Your browser does not support embedded video. <a href="assets/video-04-ai-workforce-readiness.mp4">Download the video</a>.
-          </video>
-</div>
-<p class="media-caption">Video 04 · AI Workforce Readiness</p>
-</div>
-<div class="reel-content">
-<p class="reel-eyebrow"><b>Video 04 / 07</b> — AI Workforce Readiness</p>
-<h3 class="reel-title">Technology succeeds when people are prepared.</h3>
-<p class="reel-label">Business Challenge</p>
-<p class="reel-text">Artificial Intelligence adoption depends more upon workforce readiness than technology implementation.</p>
-<p class="reel-label">Demonstrated Competencies</p>
-<div class="tag-row">
-<span class="tag">Responsible AI</span>
-<span class="tag">Digital Transformation</span>
-<span class="tag">Change Management</span>
-<span class="tag">Learning Strategy</span>
-<span class="tag">Technology Adoption</span>
-</div>
-<p class="reel-label">Framework</p>
-<div class="mini-flow">
-<span class="step">AI Literacy</span><span class="arrow">→</span>
-<span class="step">Responsible AI</span><span class="arrow">→</span>
-<span class="step">Change Readiness</span><span class="arrow">→</span>
-<span class="step">Human-Centered Learning</span><span class="arrow">→</span>
-<span class="step">Continuous Learning</span><span class="arrow">→</span>
-<span class="step">Business Innovation</span>
-</div>
-<div class="key-message">Technology succeeds when people are prepared.</div>
-</div>
-</div>
-</article>
-<article class="reel" data-index="5" id="video-5">
-<div class="reel-grid">
-<div class="reel-media">
-<div class="media-frame landscape">
-<video aria-label="Video 5: AI-Powered Learning Experience - Speed without losing the human center" controls="" playsinline="" poster="assets/video-05-reel-poster.jpg" preload="metadata">
-<source src="assets/video-05-reel-ai-in-action.mp4" type="video/mp4"/>
-            Your browser does not support embedded video. <a href="assets/video-05-reel-ai-in-action.mp4">Download the video</a>.
-          </video>
-</div>
-<p class="media-caption">Video 05 · AI-Powered Learning Experience</p>
-</div>
-<div class="reel-content">
-<p class="reel-eyebrow"><b>Video 05 / 07</b> — AI-Powered Learning Experience</p>
-<h3 class="reel-title">Speed, without losing the human center.</h3>
-<p class="reel-label">Business Challenge</p>
-<p class="reel-text">Modern organizations require scalable, engaging learning experiences.</p>
-<p class="reel-label">Demonstrated Competencies</p>
-<div class="tag-row">
-<span class="tag">Microlearning</span>
-<span class="tag">Generative AI</span>
-<span class="tag">Experience Design</span>
-<span class="tag">Prompt Engineering</span>
-<span class="tag">Rapid Development</span>
-<span class="tag">Learning Innovation</span>
-</div>
-<p class="reel-label">Featured Technologies</p>
-<div class="tag-row">
-<span class="tag">HeyGen</span>
-<span class="tag">Generative AI</span>
-<span class="tag">AI-assisted Design</span>
-<span class="tag">Avatar Learning</span>
-<span class="tag">Learning Experience Design</span>
-</div>
-<div class="key-message">Artificial Intelligence accelerates instructional design while preserving human-centered learning principles.</div>
-</div>
-</div>
-</article>
-<article class="reel reverse" data-index="6" id="video-6">
-<div class="reel-grid">
-<div class="reel-media">
-<div class="media-frame landscape">
-<video aria-label="Video 6: Technology Enablement and Digital Transformation - Ecosystems, not isolated training sessions" controls="" playsinline="" poster="assets/video-06-poster.jpg" preload="metadata">
-<source src="assets/video-06-technology-enablement.mp4" type="video/mp4"/>
-            Your browser does not support embedded video. <a href="assets/video-06-technology-enablement.mp4">Download the video</a>.
-          </video>
-</div>
-<p class="media-caption">Video 06 · Technology Enablement &amp; Digital Transformation</p>
-</div>
-<div class="reel-content">
-<p class="reel-eyebrow"><b>Video 06 / 07</b> — Technology Enablement &amp; Digital Transformation</p>
-<h3 class="reel-title">Ecosystems, not isolated training sessions.</h3>
-<p class="reel-label">Business Challenge</p>
-<p class="reel-text">Technology implementations frequently fail because adoption strategies are insufficient.</p>
-<p class="reel-label">Featured CPS Work</p>
-<div class="tag-row">
-<span class="tag">Technology Enablement Strategy</span>
-<span class="tag">Summer Academy</span>
-<span class="tag">Apple Professional Learning</span>
-<span class="tag">Jamf Professional Development</span>
-<span class="tag">Digital Resource Libraries</span>
-<span class="tag">Coaching Framework</span>
-<span class="tag">Performance Support</span>
-</div>
-<p class="reel-label">Demonstrated Competencies</p>
-<div class="tag-row">
-<span class="tag">Enterprise Learning</span>
-<span class="tag">Technology Adoption</span>
-<span class="tag">Coaching</span>
-<span class="tag">Professional Development</span>
-<span class="tag">Executive Communication</span>
-<span class="tag">Systems Thinking</span>
-</div>
-<div class="key-message">Technology transformation succeeds through structured learning ecosystems — not isolated training sessions.</div>
-</div>
-</div>
-</article>
-<article class="reel" data-index="7" id="video-7">
-<div class="reel-grid">
-<div class="reel-media">
-<div class="media-frame landscape">
-<video aria-label="Video 7: Executive Learning Philosophy and Learning Innovation" controls="" playsinline="" poster="assets/video-07-poster.jpg" preload="metadata">
-<source src="assets/video-07-learning-innovation.mp4" type="video/mp4"/>
-            Your browser does not support embedded video. <a href="assets/video-07-learning-innovation.mp4">Download the video</a>.
-          </video>
-</div>
-<p class="media-caption">Video 07 · Executive Learning Philosophy</p>
-</div>
-<div class="reel-content">
-<p class="reel-eyebrow"><b>Video 07 / 07</b> — Executive Learning Philosophy</p>
-<h3 class="reel-title">How do organizations consistently achieve learning success?</h3>
-<p class="reel-label">Executive Framework</p>
-<div class="mini-flow">
-<span class="step">Business Challenge</span><span class="arrow">→</span>
-<span class="step">Learning Strategy</span><span class="arrow">→</span>
-<span class="step">Leadership Enablement</span><span class="arrow">→</span>
-<span class="step">Technology Adoption</span><span class="arrow">→</span>
-<span class="step">Performance Improvement</span><span class="arrow">→</span>
-<span class="step">Business Results</span>
-</div>
-<p class="reel-label">Demonstrated Competencies</p>
-<div class="tag-row">
-<span class="tag">Executive Thinking</span>
-<span class="tag">Business Consulting</span>
-<span class="tag">Learning Leadership</span>
-<span class="tag">Organizational Development</span>
-<span class="tag">Strategic Vision</span>
-</div>
-<div class="key-message">Learning should never exist independently. It should directly contribute to organizational performance.</div>
-</div>
-</div>
-</article>
-</div>
-<!-- FEATURED PROJECT -->
-<section class="project" id="project-ai-guide">
-<div class="wrap">
-<div class="section-head">
-<p class="eyebrow">Featured Project — Functional AI Microlearning Prototype</p>
-<h2>AI-Powered Learning Guide</h2>
-</div>
-<div class="project-card">
-<div class="project-head" style="grid-template-columns:1fr;">
-<div>
-<h3 class="project-title">Human-Centered Microlearning for the Future of Work</h3>
-<p class="project-sub">From AI guide concept to functional learning experience.</p>
-<p class="project-desc">This project demonstrates how avatar-led instruction, responsible-AI content, workplace scenarios, and branded microlearning design can be combined into an engaging learning experience for workplace leaders.</p>
-<div class="project-meta-grid">
-<div><p class="m-label">Purpose</p><p class="m-value">Support workforce AI readiness and responsible technology adoption</p></div>
-<div><p class="m-label">My Role</p><p class="m-value">Learning strategist, experience designer, script developer, responsible-AI content designer, visual design lead, AI prototype lead</p></div>
-<div><p class="m-label">Audience</p><p class="m-value">Employees, managers, and organizational leaders</p></div>
-<div><p class="m-label">Solution</p><p class="m-value">Avatar-led microlearning &amp; AI adoption concept</p></div>
-<div><p class="m-label">Tools</p><p class="m-value">HeyGen, generative AI, script development, visual design, workplace learning strategy</p></div>
-<div><p class="m-label">Status</p><p class="m-value">Functional prototype and portfolio demonstration</p></div>
-</div>
-</div>
-</div>
-<div class="project-block">
-<h4>From AI Guide Concept to Functional Prototype</h4>
-<p class="block-lead">Meet Grace, and see the functional responsible-AI microlearning prototype.</p>
-<div class="dual-showcase">
-<div class="showcase-card">
-<!-- Grace introduction video -->
-<div class="media-frame">
-<video aria-label="Meet Grace, the AI-powered learning guide" controls="" id="graceVideo" playsinline="" poster="assets/video-grace-16x9-poster.jpg" preload="metadata">
-<source src="assets/video-grace-16x9.mp4" type="video/mp4"/>
-                Your browser does not support embedded video. <a href="assets/video-grace-16x9.mp4">Download the video</a>.
-              </video>
-</div>
-<p class="showcase-eyebrow">Left — AI Learning Guide</p>
-<h5 class="showcase-title">Meet Grace — AI-Powered Learning Guide</h5>
-<p class="showcase-desc">Grace introduces the avatar-led learning-guide concept and demonstrates the visual identity and instructional-delivery approach developed for the prototype.</p>
-<a class="btn showcase-cta" href="#project-ai-guide" id="watchGraceBtn">Watch Grace in Action</a>
-</div>
-<div class="showcase-card">
-<!-- Responsible-AI microlearning prototype video -->
-<div class="media-frame">
-<video aria-label="Responsible-AI microlearning prototype: Before You Use AI at Work - Three Responsible-AI Checks" controls="" id="responsibleAiVideo" playsinline="" poster="assets/video-responsible-ai-revised-poster.jpg" preload="metadata">
-<source src="assets/video-responsible-ai-revised.mp4" type="video/mp4"/>
-                Your browser does not support embedded video. <a href="assets/video-responsible-ai-revised.mp4">Download the video</a>.
-              </video>
-</div>
-<p class="showcase-eyebrow">Right — Functional Prototype</p>
-<h5 class="showcase-title">Before You Use AI at Work</h5>
-<p class="showcase-subtitle">Three Responsible-AI Checks</p>
-<p class="showcase-desc">A functional workplace-learning prototype that helps leaders protect information, verify AI-generated output, and consider the human impact of AI-supported decisions.</p>
-<a class="btn showcase-cta" href="#project-ai-guide" id="watchPrototypeBtn">Watch the Functional Prototype</a>
-</div>
-</div>
-</div>
-<div class="project-block">
-<h4>The Business Challenge</h4>
-<p class="block-lead">Many AI training programs are either overly technical or disconnected from daily work.</p>
-<p class="p-text">As organizations accelerate AI adoption, employees need practical learning experiences that build understanding, confidence, and responsible use. The opportunity was to create an approachable learning experience that introduced AI's value without removing the human element from workplace development.</p>
-<div class="card-grid">
-<div class="mini-card">
-<p class="mc-title">Increase Accessibility</p>
-<p class="mc-desc">Translate AI concepts into clear, practical workplace language.</p>
-</div>
-<div class="mini-card">
-<p class="mc-title">Support Adoption</p>
-<p class="mc-desc">Introduce AI as a tool for productivity, learning, and decision support.</p>
-</div>
-<div class="mini-card">
-<p class="mc-title">Maintain Human-Centered Design</p>
-<p class="mc-desc">Reinforce that AI should augment human capability rather than replace human judgment.</p>
-</div>
-</div>
-</div>
-<div class="project-block">
-<h4>The Learning Solution</h4>
-<p class="block-lead">Grace: a reusable, avatar-led microlearning system.</p>
-<p class="p-text">I designed Grace, a branded AI learning-guide prototype that introduces employees to AI-enabled workplace learning — combining instructional scripting, avatar-led delivery, visual branding, and microlearning into a modular experience for onboarding, leadership development, and just-in-time performance support.</p>
-<div class="card-grid cols-2">
-<div class="mini-card"><p class="mc-title">AI Learning Guide</p><p class="mc-desc">Approachable digital character supporting learner engagement.</p></div>
-<div class="mini-card"><p class="mc-title">Avatar-Led Video</p><p class="mc-desc">Short, consistent instructional delivery.</p></div>
-<div class="mini-card"><p class="mc-title">Branded Visual System</p><p class="mc-desc">Coordinated imagery across learning and communication assets.</p></div>
-<div class="mini-card"><p class="mc-title">Cross-Device Formats</p><p class="mc-desc">Designed for desktop, mobile, social, and presentation use.</p></div>
-<div class="mini-card"><p class="mc-title">Performance Support</p><p class="mc-desc">Concise guidance delivered at the point of need.</p></div>
-<div class="mini-card"><p class="mc-title">Reusable Framework</p><p class="mc-desc">A modular structure adaptable across learning topics.</p></div>
-</div>
-</div>
-<div class="project-block">
-<h4>Project Case Study</h4>
-<p class="block-lead">A concise executive summary of the prototype.</p>
-<div class="case-block">
-<p class="case-label">Business Need</p>
-<p class="case-text">Organizations need practical guidance that helps employees and leaders use AI responsibly without creating unnecessary fear or technical complexity.</p>
-</div>
-<div class="case-block">
-<p class="case-label">Learning Objective</p>
-<p class="case-text">Help workplace leaders apply three responsible-AI checks before using AI-generated information in professional decisions.</p>
-</div>
-<div class="case-block">
-<p class="case-label">Three Responsible-AI Checks</p>
-<ul class="check-list">
-<li><span class="check-num">1</span> Protect the Information</li>
-<li><span class="check-num">2</span> Verify the Output</li>
-<li><span class="check-num">3</span> Consider the Impact</li>
-</ul>
-</div>
-<div class="case-block">
-<p class="case-label">Workplace Scenario</p>
-<p class="case-text">A manager uses AI to summarize employee-performance notes and recommend development candidates. The manager must assess data privacy, accuracy, bias, fairness, transparency, and organizational criteria before making a decision.</p>
-</div>
-<div class="core-message">
-<p>“Responsible AI supports human decision-making — it does not replace accountability.”</p>
-</div>
-</div>
-<div class="project-block">
-<h4>My Leadership Contribution</h4>
-<p class="p-text">I led the concept development, learning strategy, instructional scripting, avatar direction, visual identity, and prototype design — and defined how the solution could scale from a short microlearning experience into a broader AI adoption and performance-support campaign.</p>
-<div class="tag-row">
-<span class="tag">Learning Strategy</span>
-<span class="tag">AI Content Development</span>
-<span class="tag">Microlearning Design</span>
-<span class="tag">Change &amp; Adoption</span>
-<span class="tag">Executive Comms</span>
-<span class="tag">Visual Storytelling</span>
-<span class="tag">Emerging-Tech Translation</span>
-<span class="tag">Responsible AI</span>
-</div>
-</div>
-<details class="project-details">
-<summary>Explore the Full Design Process<span class="summary-note">Design principles, governance, and development detail</span></summary>
-<div class="project-details-inner">
-<div class="project-block">
-<h4>Design Principles</h4>
-<p class="block-lead">How instructional strategy shaped the learner experience.</p>
-<div class="card-grid cols-4">
-<div class="mini-card"><p class="mc-title">Human-Centered Positioning</p><p class="mc-desc">Approachable, professional, and future-focused — emphasizing augmentation rather than replacement.</p></div>
-<div class="mini-card"><p class="mc-title">Microlearning Structure</p><p class="mc-desc">Short scenes and one central message support rapid comprehension and retention.</p></div>
-<div class="mini-card"><p class="mc-title">Scalable Delivery</p><p class="mc-desc">Adapts across business units, employee populations, and learning topics.</p></div>
-<div class="mini-card"><p class="mc-title">Brand Consistency</p><p class="mc-desc">Coordinated formats support portfolio, mobile, social, and stakeholder demos.</p></div>
-</div>
-</div>
-<div class="project-block">
-<h4>AI-Powered Learning Experience</h4>
-<p class="block-lead">Three ways AI can support workplace learning.</p>
-<div class="card-grid">
-<div class="mini-card"><p class="mc-title">Personalized Pathways</p><p class="mc-desc">Personalize learning pathways to the individual learner.</p></div>
-<div class="mini-card"><p class="mc-title">Just-in-Time Support</p><p class="mc-desc">Performance support delivered exactly when it's needed.</p></div>
-<div class="mini-card"><p class="mc-title">Capability-Gap Identification</p><p class="mc-desc">Surfaces organizational capability gaps for targeted intervention.</p></div>
-</div>
-</div>
-<div class="project-block">
-<h4>Design Approach</h4>
-<div class="card-grid cols-4">
-<div class="mini-card"><p class="mc-title">Short-Form Microlearning</p><p class="mc-desc">Concise scenes built for fast comprehension and retention.</p></div>
-<div class="mini-card"><p class="mc-title">Avatar-Led Instruction</p><p class="mc-desc">Consistent, approachable delivery through a branded learning guide.</p></div>
-<div class="mini-card"><p class="mc-title">Workplace Relevance</p><p class="mc-desc">Scenarios grounded in real managerial decisions.</p></div>
-<div class="mini-card"><p class="mc-title">Visual Consistency</p><p class="mc-desc">A coordinated brand system across every asset.</p></div>
-<div class="mini-card"><p class="mc-title">Scenario-Based Learning</p><p class="mc-desc">Judgment practiced through a realistic workplace situation.</p></div>
-<div class="mini-card"><p class="mc-title">Concise Takeaways</p><p class="mc-desc">Three checks a leader can recall and apply immediately.</p></div>
-<div class="mini-card"><p class="mc-title">Responsible-AI Principles</p><p class="mc-desc">Privacy, accuracy, bias, fairness, and transparency built into the content.</p></div>
-<div class="mini-card"><p class="mc-title">Executive Audience Positioning</p><p class="mc-desc">Framed for leaders making real organizational decisions.</p></div>
-</div>
-</div>
-<div class="project-block">
-<h4>Organizational Value</h4>
-<div class="card-grid" style="grid-template-columns:repeat(5,1fr);">
-<div class="mini-card"><p class="mc-title">Workforce Readiness</p><p class="mc-desc">An accessible entry point for employees uncertain about AI.</p></div>
-<div class="mini-card"><p class="mc-title">Adoption Support</p><p class="mc-desc">Integrates into larger change management initiatives.</p></div>
-<div class="mini-card"><p class="mc-title">Scalable Comms</p><p class="mc-desc">Consistent messaging across locations and departments.</p></div>
-<div class="mini-card"><p class="mc-title">Learning Efficiency</p><p class="mc-desc">Short, targeted interventions rather than lengthy programs.</p></div>
-<div class="mini-card"><p class="mc-title">L&amp;D Innovation</p><p class="mc-desc">Rapid prototyping of new experiences while preserving quality.</p></div>
-</div>
-</div>
-<div class="project-block">
-<h4>Governance &amp; Responsible AI</h4>
-<p class="block-lead">Built on ethical pillars to ensure trust, safety, and compliance.</p>
-<div class="card-grid cols-4">
-<div class="mini-card"><p class="mc-title">Clear Disclosure</p><p class="mc-desc">Identify the learning guide clearly as AI-generated.</p></div>
-<div class="mini-card"><p class="mc-title">Subject-Matter Review</p><p class="mc-desc">Qualified experts review instructional content before deployment.</p></div>
-<div class="mini-card"><p class="mc-title">Accessibility &amp; Brand Standards</p><p class="mc-desc">Validate accessibility and brand alignment before deployment.</p></div>
-<div class="mini-card"><p class="mc-title">Implementation Governance</p><p class="mc-desc">Standards for voice, likeness, data privacy, security, and IP.</p></div>
-</div>
-</div>
-<div class="project-block">
-<h4>Prototype Development Process</h4>
-<p class="block-lead">From workplace need to functional prototype.</p>
-<ul class="process-list">
-<li><span class="p-num">01</span><div><p class="p-title">Define the Workplace-Learning Need</p><p class="p-desc">Identify the business problem responsible AI use was meant to solve.</p></div></li>
-<li><span class="p-num">02</span><div><p class="p-title">Identify the Responsible-AI Principles</p><p class="p-desc">Ground the content in privacy, accuracy, bias, fairness, and transparency.</p></div></li>
-<li><span class="p-num">03</span><div><p class="p-title">Write the Microlearning Script</p><p class="p-desc">Translate the principles into a concise, scenario-based narrative.</p></div></li>
-<li><span class="p-num">04</span><div><p class="p-title">Design the Branded Visual System</p><p class="p-desc">Build a coordinated look across the avatar, slides, and supporting assets.</p></div></li>
-<li><span class="p-num">05</span><div><p class="p-title">Build the Avatar-Led Prototype</p><p class="p-desc">Produce the avatar video using generative-AI tools and instructional design.</p></div></li>
-<li><span class="p-num">06</span><div><p class="p-title">Review Narration, Captions &amp; Consistency</p><p class="p-desc">Check content accuracy, caption quality, and visual alignment.</p></div></li>
-<li><span class="p-num">07</span><div><p class="p-title">Document Future Iteration Opportunities</p><p class="p-desc">Capture refinement priorities for the next phase of development.</p></div></li>
-</ul>
-</div>
-</div>
-</details>
-<div class="project-block">
-<h4>Reflection &amp; Next Steps</h4>
-<div class="reflect-grid">
-<div>
-<p class="block-lead" style="font-size:17px;">Executive Reflection</p>
-<p class="p-text">This project reinforced the importance of combining AI fluency with instructional judgment. The value of the technology is not simply its ability to produce content quickly — it lies in how learning leaders use it to create relevant, ethical, scalable, and performance-focused experiences.</p>
-<p class="p-text">A future iteration would further refine the narrator's vocal consistency and brand alignment through a custom voice model, while preserving the instructional structure, responsible-AI content, visual design, and workplace scenario.</p>
-</div>
-<div>
-<p class="block-lead" style="font-size:17px;">Next Phase</p>
-<p class="p-text">The next phase would pilot the microlearning experience with a representative learner group, validate accessibility and usability, add knowledge checks, and measure changes in confidence, responsible-AI awareness, and behavioral intent.</p>
-<ul class="future-list">
-<li>Custom voice-model alignment</li>
-<li>Interactive knowledge checks</li>
-<li>Learner branching</li>
-<li>Accessibility validation</li>
-<li>Feedback collection</li>
-<li>Analytics</li>
-<li>Additional responsible-AI modules</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CAPABILITIES -->
-<section class="capabilities" id="capabilities">
-<div class="wrap">
-<div class="section-head">
-<p class="eyebrow">Leadership &amp; Capabilities</p>
-<h2>Leadership That Connects Vision to Results</h2>
-<p style="margin-top:16px; font-size:15.5px; color:var(--ink-soft); line-height:1.65;">Andrea combines learning strategy, technology enablement, leadership development, and human-centered design to help organizations prepare people for change.</p>
-</div>
-<div class="cap-grid">
-<div class="cap-block">
-<span aria-hidden="true" class="cap-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg></span>
-<h3>Learning Strategy</h3>
-<ul class="cap-list">
-<li>Enterprise learning strategy</li>
-<li>Program architecture</li>
-<li>Needs analysis</li>
-<li>Performance consulting</li>
-</ul>
-</div>
-<div class="cap-block">
-<span aria-hidden="true" class="cap-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="16" rx="2" width="16" x="4" y="4"></rect><path d="M9 9h6v6H9zM9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"></path></svg></span>
-<h3>AI &amp; Technology Enablement</h3>
-<ul class="cap-list">
-<li>AI workforce readiness</li>
-<li>Responsible-AI learning</li>
-<li>Technology adoption</li>
-<li>Digital transformation</li>
-</ul>
-</div>
-<div class="cap-block">
-<span aria-hidden="true" class="cap-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="9" cy="8" r="3"></circle><path d="M2 20c0-3.3 3-5.5 7-5.5s7 2.2 7 5.5"></path><circle cx="17" cy="8" r="2.4"></circle><path d="M17 12.5c2.8.2 5 2.2 5 5"></path></svg></span>
-<h3>Leadership Development</h3>
-<ul class="cap-list">
-<li>Manager enablement</li>
-<li>Coaching</li>
-<li>Leadership learning</li>
-<li>Facilitation</li>
-</ul>
-</div>
-<div class="cap-block">
-<span aria-hidden="true" class="cap-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M17 3l4 4-4 4M21 7H8a5 5 0 0 0-5 5M7 21l-4-4 4-4M3 17h13a5 5 0 0 0 5-5"></path></svg></span>
-<h3>Change &amp; Adoption</h3>
-<ul class="cap-list">
-<li>Stakeholder engagement</li>
-<li>Communication strategy</li>
-<li>Adoption planning</li>
-<li>Change enablement</li>
-</ul>
-</div>
-<div class="cap-block">
-<span aria-hidden="true" class="cap-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"></path></svg></span>
-<h3>Experience Design</h3>
-<ul class="cap-list">
-<li>Instructional design</li>
-<li>Microlearning</li>
-<li>Multimedia development</li>
-<li>Learner experience</li>
-</ul>
-</div>
-<div class="cap-block">
-<span aria-hidden="true" class="cap-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M4 20h16M7 20V10M12 20V4M17 20v-7"></path></svg></span>
-<h3>Organizational Performance</h3>
-<ul class="cap-list">
-<li>Measurement</li>
-<li>Continuous improvement</li>
-<li>Data-informed decisions</li>
-<li>Business alignment</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<!-- VISION -->
-<section class="vision" id="vision">
-<div class="wrap">
-<p class="eyebrow on-dark">Future Vision</p>
-<p class="vision-text on-dark">Artificial intelligence is reshaping how organizations learn, collaborate, and innovate. The future belongs to organizations that successfully integrate <b>people</b>, <b>technology</b>, <b>leadership</b>, <b>learning</b>, and <b>business strategy</b>.</p>
-<div class="vision-pillars">
-<span>People</span>
-<span>Technology</span>
-<span>Leadership</span>
-<span>Learning</span>
-<span>Business Strategy</span>
-</div>
-</div>
+<section class="strategy-assets" id="strategy-assets">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Selected Strategy Assets</p>
+      <h2>Downloadable frameworks and executive summaries</h2>
+    </div>
+    <p class="lead" style="max-width:720px; margin:0 0 36px; color:var(--ink-soft); font-size:16px; line-height:1.7;">Two strategic work products demonstrating enterprise learning, AI adoption, and workforce-transformation capabilities — translated into practical, shareable frameworks.</p>
+
+    <div class="assets-grid">
+
+      <div class="asset-card">
+        <div class="asset-cover">
+          <picture><source type="image/webp" srcset="assets/playbook-cover.webp"><img src="assets/playbook-cover.png" alt="Cover page preview of the AI Workforce Readiness & Adoption Playbook, showing the READY Framework overview" width="850" height="1100" loading="lazy"></picture>
+        </div>
+        <div class="asset-body">
+          <span class="asset-badge">Strategic Work Product</span>
+          <h3>AI Workforce Readiness & Adoption Playbook</h3>
+          <p class="asset-desc">A human-centered operating model for moving organizations from AI curiosity to responsible, measurable workforce adoption. The READY Framework connects workforce readiness, leader enablement, role-based learning, workflow support, governance, and business-impact measurement.</p>
+          <div class="tag-row">
+            <span class="tag">AI Workforce Readiness</span>
+            <span class="tag">Leadership Enablement</span>
+            <span class="tag">Technology Adoption</span>
+            <span class="tag">Change Enablement</span>
+            <span class="tag">Learning Strategy</span>
+          </div>
+          <div class="asset-actions">
+            <a class="btn" href="assets/Andrea_Davis-Baptiste_AI_Workforce_Readiness_Adoption_Playbook_Portfolio_Final.pdf" target="_blank" rel="noopener noreferrer" data-track="playbook-view" aria-label="View AI Workforce Readiness & Adoption Playbook (opens in new tab)">View Playbook</a>
+            <a class="btn ghost" href="assets/Andrea_Davis-Baptiste_AI_Workforce_Readiness_Adoption_Playbook_Portfolio_Final.pdf" download data-track="playbook-download" aria-label="Download AI Workforce Readiness & Adoption Playbook PDF">Download PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="asset-card">
+        <div class="asset-cover">
+          <picture><source type="image/webp" srcset="assets/profile-cover.webp"><img src="assets/profile-cover.png" alt="Cover page preview of Andrea Davis-Baptiste's Executive Value Profile, summarizing enterprise impact and signature capabilities" width="850" height="1100" loading="lazy"></picture>
+        </div>
+        <div class="asset-body">
+          <span class="asset-badge">Executive Profile</span>
+          <h3>Executive Value Profile</h3>
+          <p class="asset-desc">A concise overview of Andrea Davis-Baptiste's enterprise learning, workforce enablement, leadership development, technology-adoption experience, measurable outcomes, signature capabilities, and leadership value.</p>
+          <div class="tag-row">
+            <span class="tag">Enterprise Learning</span>
+            <span class="tag">Workforce Enablement</span>
+            <span class="tag">Leadership Development</span>
+            <span class="tag">Learning Operations</span>
+            <span class="tag">Performance Improvement</span>
+          </div>
+          <div class="asset-actions">
+            <a class="btn" href="assets/Andrea_Davis-Baptiste_Executive_Value_Profile_Portfolio_Final.pdf" target="_blank" rel="noopener noreferrer" data-track="executive-profile-view" aria-label="View Executive Value Profile (opens in new tab)">View Executive Profile</a>
+            <a class="btn ghost" href="assets/Andrea_Davis-Baptiste_Executive_Value_Profile_Portfolio_Final.pdf" download data-track="executive-profile-download" aria-label="Download Executive Value Profile PDF">Download PDF</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 <!-- RESEARCH & THOUGHT LEADERSHIP -->
-<section class="research" id="research">
-<div class="wrap">
-<div class="section-head">
-<p class="eyebrow">Research-Informed Leadership</p>
-<h2>Research &amp; Thought Leadership</h2>
-</div>
-<p class="lead">Andrea's doctoral work strengthens her approach to AI-enabled learning, responsible innovation, leadership, and organizational transformation by connecting research with practical workplace application.</p>
-<div class="research-grid">
-<div class="research-card">
-<div aria-hidden="true" class="research-icon">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><path d="M12 6.5c-1.6-1-3.6-1.5-5.5-1.5-.6 0-1 .4-1 1v11c0 .6.4 1 1 1 1.9 0 3.9.5 5.5 1.5 1.6-1 3.6-1.5 5.5-1.5.6 0 1-.4 1-1V6c0-.6-.4-1-1-1-1.9 0-3.9.5-5.5 1.5z"></path><path d="M12 6.5v12"></path></svg>
-</div>
-<h4>Doctoral Study</h4>
-<p>Doctor of Philosophy (PhD), Leadership — ABD<br/>Concordia University Chicago<br/>Expected December 2027</p>
-</div>
-<div class="research-card">
-<div aria-hidden="true" class="research-icon">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="6" cy="6" r="2.4"></circle><circle cx="18" cy="6" r="2.4"></circle><circle cx="12" cy="18" r="2.4"></circle><path d="M8.1 7.3 10.3 16M15.9 7.3 13.7 16M8.3 6h7.4"></path></svg>
-</div>
-<h4>Doctoral Research Focus</h4>
-<p>Ethical equity in AI-driven personalization within workplace learning.</p>
-<ul>
-<li>Responsible AI</li>
-<li>Human-centered design</li>
-<li>Adult learning</li>
-<li>AI governance</li>
-<li>Organizational adoption</li>
-<li>Accessibility and employee trust</li>
-</ul>
-</div>
-<div class="research-card">
-<div aria-hidden="true" class="research-icon">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="m15.5 8.5-2 5.5-5.5 2 2-5.5z"></path></svg>
-</div>
-<h4>Research-to-Practice Value</h4>
-<p>Andrea applies this research to help organizations design AI-enabled learning experiences that balance innovation, employee trust, accessibility, responsible use, workforce readiness, and measurable organizational performance.</p>
-</div>
-</div>
-<div class="research-statement">
-<hr class="rs-divider"/>
-<blockquote>“Research strengthens the strategy. Practice proves its value.”</blockquote>
-<span aria-hidden="true" class="rs-dot"></span>
-</div>
-</div>
+<section class="project" id="project-ai-guide">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Featured AI Learning Project</p>
+      <h2>Responsible AI Learning Prototype</h2>
+    </div>
+
+    <div class="project-card">
+
+      <div class="project-head" style="grid-template-columns:1fr;">
+        <div>
+          <h3 class="project-title">Human-Centered Microlearning for the Future of Work</h3>
+          <p class="project-sub">From AI guide concept to functional learning experience.</p>
+          <p class="project-desc">This project demonstrates how avatar-led instruction, responsible-AI content, workplace scenarios, and branded microlearning design can be combined into an engaging learning experience for workplace leaders.</p>
+          <div class="project-meta-grid">
+            <div><p class="m-label">Purpose</p><p class="m-value">Support workforce AI readiness and responsible technology adoption</p></div>
+            <div><p class="m-label">My Role</p><p class="m-value">Led learning strategy, responsible-AI content, experience design, and prototype direction.</p></div>
+            <div><p class="m-label">Audience</p><p class="m-value">Employees, managers, and organizational leaders</p></div>
+            <div><p class="m-label">Solution</p><p class="m-value">Avatar-led microlearning &amp; AI adoption concept</p></div>
+            <div><p class="m-label">Tools</p><p class="m-value">HeyGen, generative AI, script development, visual design, workplace learning strategy</p></div>
+            <div><p class="m-label">Status</p><p class="m-value">Functional learning prototype</p></div>
+          </div>
+        </div>
+      </div>
+
+            <div class="project-block">
+        <h4>From AI Guide Concept to Functional Prototype</h4>
+        <p class="block-lead">Meet Grace, and see the functional responsible-AI microlearning prototype.</p>
+        <div class="dual-showcase">
+
+          <div class="showcase-card">
+            <!-- Grace introduction video -->
+            <div class="media-frame portrait-media">
+              <video data-track="video-play" id="graceVideo" controls preload="metadata" playsinline poster="assets/grace-video-poster.webp" aria-label="Meet Grace, the AI-Powered Learning Guide">
+                <source src="assets/video-grace.mp4" type="video/mp4">
+                Your browser does not support embedded video. <a href="assets/video-grace.mp4">Download the video</a>.
+              </video>
+            </div>
+            <p class="showcase-eyebrow">Left — AI Learning Guide</p>
+            <h5 class="showcase-title">Meet Grace — AI-Powered Learning Guide</h5>
+            <p class="showcase-desc">Grace introduces the avatar-led learning-guide concept and demonstrates the visual identity and instructional-delivery approach developed for the prototype.</p>
+            <a class="btn showcase-cta" href="#project-ai-guide" id="watchGraceBtn">Watch Grace in Action</a>
+          </div>
+
+          <div class="showcase-card">
+            <!-- Responsible-AI microlearning prototype video -->
+            <div class="media-frame">
+              <video data-track="video-play" id="responsibleAiVideo" controls preload="metadata" poster="assets/video-responsible-ai-revised-poster.webp" playsinline aria-label="Responsible-AI microlearning prototype: Before You Use AI at Work, three responsible-AI checks">
+                <source src="assets/video-responsible-ai-revised.mp4" type="video/mp4">
+                Your browser does not support embedded video. <a href="assets/video-responsible-ai-revised.mp4">Download the video</a>.
+              </video>
+            </div>
+            <p class="showcase-eyebrow">Right — Functional Prototype</p>
+            <h5 class="showcase-title">Before You Use AI at Work</h5>
+            <p class="showcase-subtitle">Three Responsible-AI Checks</p>
+            <p class="showcase-desc">A functional workplace-learning prototype that helps leaders protect information, verify AI-generated output, and consider the human impact of AI-supported decisions.</p>
+            <a class="btn showcase-cta" href="#project-ai-guide" id="watchPrototypeBtn">Watch the Functional Prototype</a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="project-block">
+        <h4>The Challenge &amp; Solution</h4>
+        <p class="block-lead">Many AI training programs are either overly technical or disconnected from daily work.</p>
+        <p class="p-text">Employees need practical, human-centered ways to build confidence and responsible-AI habits — not another technical manual. I designed Grace, a reusable avatar-led microlearning prototype that introduces AI-enabled workplace learning through short, branded video content, combining instructional scripting, avatar-led delivery, and visual branding into a modular experience for onboarding and performance support.</p>
+        <div class="card-grid cols-2">
+          <div class="mini-card">
+            <p class="mc-title">Increase Accessibility</p>
+            <p class="mc-desc">Translate AI concepts into clear, practical workplace language.</p>
+          </div>
+          <div class="mini-card">
+            <p class="mc-title">Support Adoption</p>
+            <p class="mc-desc">Introduce AI as a tool for productivity, learning, and decision support.</p>
+          </div>
+          <div class="mini-card">
+            <p class="mc-title">Maintain Human-Centered Design</p>
+            <p class="mc-desc">Reinforce that AI should augment human capability rather than replace human judgment.</p>
+          </div>
+          <div class="mini-card">
+            <p class="mc-title">Reusable Framework</p>
+            <p class="mc-desc">A modular structure adaptable across learning topics and delivery formats.</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="project-block">
+        <h4>My Leadership Contribution</h4>
+        <p class="p-text">I led the concept development, learning strategy, instructional scripting, avatar direction, visual identity, and prototype design — and defined how the solution could scale from a short microlearning experience into a broader AI adoption and performance-support campaign.</p>
+        <div class="tag-row">
+          <span class="tag">Learning Strategy</span>
+          <span class="tag">AI Content Development</span>
+          <span class="tag">Microlearning Design</span>
+          <span class="tag">Change &amp; Adoption</span>
+          <span class="tag">Executive Comms</span>
+          <span class="tag">Visual Storytelling</span>
+          <span class="tag">Emerging-Tech Translation</span>
+          <span class="tag">Responsible AI</span>
+        </div>
+      </div>
+
+      
+
+      <details class="project-details" data-track="case-study-expand">
+        <summary>Explore the Full Design Process<span class="summary-note">Design principles, governance, and development detail</span></summary>
+        <div class="project-details-inner">
+
+      <div class="project-block">
+        <h4>Design Principles</h4>
+        <p class="block-lead">How instructional strategy shaped the learner experience.</p>
+        <div class="card-grid cols-4">
+          <div class="mini-card"><p class="mc-title">Human-Centered Positioning</p><p class="mc-desc">Approachable, professional, and future-focused — emphasizing augmentation rather than replacement.</p></div>
+          <div class="mini-card"><p class="mc-title">Microlearning Structure</p><p class="mc-desc">Short scenes and one central message support rapid comprehension and retention.</p></div>
+          <div class="mini-card"><p class="mc-title">Scalable Delivery</p><p class="mc-desc">Adapts across business units, employee populations, and learning topics.</p></div>
+          <div class="mini-card"><p class="mc-title">Brand Consistency</p><p class="mc-desc">Coordinated formats support print, mobile, social, and stakeholder-ready delivery.</p></div>
+        </div>
+      </div>
+
+      
+
+      <div class="project-block">
+        <h4>AI-Powered Learning Experience</h4>
+        <p class="block-lead">Three ways AI can support workplace learning.</p>
+        <div class="card-grid">
+          <div class="mini-card"><p class="mc-title">Personalized Pathways</p><p class="mc-desc">Personalize learning pathways to the individual learner.</p></div>
+          <div class="mini-card"><p class="mc-title">Just-in-Time Support</p><p class="mc-desc">Performance support delivered exactly when it's needed.</p></div>
+          <div class="mini-card"><p class="mc-title">Capability-Gap Identification</p><p class="mc-desc">Surfaces organizational capability gaps for targeted intervention.</p></div>
+        </div>
+      </div>
+
+      
+
+      <div class="project-block">
+        <h4>Design Approach</h4>
+        <div class="card-grid cols-4">
+          <div class="mini-card"><p class="mc-title">Short-Form Microlearning</p><p class="mc-desc">Concise scenes built for fast comprehension and retention.</p></div>
+          <div class="mini-card"><p class="mc-title">Avatar-Led Instruction</p><p class="mc-desc">Consistent, approachable delivery through a branded learning guide.</p></div>
+          <div class="mini-card"><p class="mc-title">Workplace Relevance</p><p class="mc-desc">Scenarios grounded in real managerial decisions.</p></div>
+          <div class="mini-card"><p class="mc-title">Visual Consistency</p><p class="mc-desc">A coordinated brand system across every asset.</p></div>
+          <div class="mini-card"><p class="mc-title">Scenario-Based Learning</p><p class="mc-desc">Judgment practiced through a realistic workplace situation.</p></div>
+          <div class="mini-card"><p class="mc-title">Concise Takeaways</p><p class="mc-desc">Three checks a leader can recall and apply immediately.</p></div>
+          <div class="mini-card"><p class="mc-title">Responsible-AI Principles</p><p class="mc-desc">Privacy, accuracy, bias, fairness, and transparency built into the content.</p></div>
+          <div class="mini-card"><p class="mc-title">Executive Audience Positioning</p><p class="mc-desc">Framed for leaders making real organizational decisions.</p></div>
+        </div>
+      </div>
+
+      
+
+      <div class="project-block">
+        <h4>Organizational Value</h4>
+        <div class="card-grid" style="grid-template-columns:repeat(5,1fr);">
+          <div class="mini-card"><p class="mc-title">Workforce Readiness</p><p class="mc-desc">An accessible entry point for employees uncertain about AI.</p></div>
+          <div class="mini-card"><p class="mc-title">Adoption Support</p><p class="mc-desc">Integrates into larger change management initiatives.</p></div>
+          <div class="mini-card"><p class="mc-title">Scalable Comms</p><p class="mc-desc">Consistent messaging across locations and departments.</p></div>
+          <div class="mini-card"><p class="mc-title">Learning Efficiency</p><p class="mc-desc">Short, targeted interventions rather than lengthy programs.</p></div>
+          <div class="mini-card"><p class="mc-title">L&amp;D Innovation</p><p class="mc-desc">Rapid prototyping of new experiences while preserving quality.</p></div>
+        </div>
+      </div>
+
+      
+
+      <div class="project-block">
+        <h4>Governance &amp; Responsible AI</h4>
+        <p class="block-lead">Built on ethical pillars to ensure trust, safety, and compliance.</p>
+        <div class="card-grid cols-4">
+          <div class="mini-card"><p class="mc-title">Clear Disclosure</p><p class="mc-desc">Identify the learning guide clearly as AI-generated.</p></div>
+          <div class="mini-card"><p class="mc-title">Subject-Matter Review</p><p class="mc-desc">Qualified experts review instructional content before deployment.</p></div>
+          <div class="mini-card"><p class="mc-title">Accessibility &amp; Brand Standards</p><p class="mc-desc">Validate accessibility and brand alignment before deployment.</p></div>
+          <div class="mini-card"><p class="mc-title">Implementation Governance</p><p class="mc-desc">Standards for voice, likeness, data privacy, security, and IP.</p></div>
+        </div>
+      </div>
+
+      
+
+      <div class="project-block">
+        <h4>Prototype Development Process</h4>
+        <p class="block-lead">From workplace need to functional prototype.</p>
+        <ul class="process-list">
+          <li><span class="p-num">01</span><div><p class="p-title">Define the Workplace-Learning Need</p><p class="p-desc">Identify the business problem responsible AI use was meant to solve.</p></div></li>
+          <li><span class="p-num">02</span><div><p class="p-title">Identify the Responsible-AI Principles</p><p class="p-desc">Ground the content in privacy, accuracy, bias, fairness, and transparency.</p></div></li>
+          <li><span class="p-num">03</span><div><p class="p-title">Write the Microlearning Script</p><p class="p-desc">Translate the principles into a concise, scenario-based narrative.</p></div></li>
+          <li><span class="p-num">04</span><div><p class="p-title">Design the Branded Visual System</p><p class="p-desc">Build a coordinated look across the avatar, slides, and supporting assets.</p></div></li>
+          <li><span class="p-num">05</span><div><p class="p-title">Build the Avatar-Led Prototype</p><p class="p-desc">Produce the avatar video using generative-AI tools and instructional design.</p></div></li>
+          <li><span class="p-num">06</span><div><p class="p-title">Review Narration, Captions &amp; Consistency</p><p class="p-desc">Check content accuracy, caption quality, and visual alignment.</p></div></li>
+          <li><span class="p-num">07</span><div><p class="p-title">Document Future Iteration Opportunities</p><p class="p-desc">Capture refinement priorities for the next phase of development.</p></div></li>
+        </ul>
+      </div>
+
+        </div>
+      <div class="project-block">
+        <h4>Project Case Study</h4>
+        <p class="block-lead">A concise executive summary of the prototype.</p>
+
+        <div class="case-block">
+          <p class="case-label">Business Need</p>
+          <p class="case-text">Organizations need practical guidance that helps employees and leaders use AI responsibly without creating unnecessary fear or technical complexity.</p>
+        </div>
+
+        <div class="case-block">
+          <p class="case-label">Learning Objective</p>
+          <p class="case-text">Help workplace leaders apply three responsible-AI checks before using AI-generated information in professional decisions.</p>
+        </div>
+
+        <div class="case-block">
+          <p class="case-label">Three Responsible-AI Checks</p>
+          <ul class="check-list">
+            <li><span class="check-num">1</span> Protect the Information</li>
+            <li><span class="check-num">2</span> Verify the Output</li>
+            <li><span class="check-num">3</span> Consider the Impact</li>
+          </ul>
+        </div>
+
+        <div class="case-block">
+          <p class="case-label">Workplace Scenario</p>
+          <p class="case-text">A manager uses AI to summarize employee-performance notes and recommend development candidates. The manager must assess data privacy, accuracy, bias, fairness, transparency, and organizational criteria before making a decision.</p>
+        </div>
+
+        <div class="core-message">
+          <p>&ldquo;Responsible AI supports human decision-making — it does not replace accountability.&rdquo;</p>
+        </div>
+      </div>
+
+      
+
+            <div class="project-block">
+        <h4>Reflection &amp; Next Steps</h4>
+        <div class="reflect-grid">
+          <div>
+            <p class="block-lead" style="font-size:17px;">Executive Reflection</p>
+            <p class="p-text">This project reinforced the importance of combining AI fluency with instructional judgment. The value of the technology is not simply its ability to produce content quickly — it lies in how learning leaders use it to create relevant, ethical, scalable, and performance-focused experiences.</p>
+            <p class="p-text">A future iteration would further refine the narrator's vocal consistency and brand alignment through a custom voice model, while preserving the instructional structure, responsible-AI content, visual design, and workplace scenario.</p>
+          </div>
+          <div>
+            <p class="block-lead" style="font-size:17px;">Next Phase</p>
+            <p class="p-text">The next phase would pilot the microlearning experience with a representative learner group, validate accessibility and usability, add knowledge checks, and measure changes in confidence, responsible-AI awareness, and behavioral intent.</p>
+            <ul class="future-list">
+              <li>Custom voice-model alignment</li>
+              <li>Interactive knowledge checks</li>
+              <li>Learner branching</li>
+              <li>Accessibility validation</li>
+              <li>Feedback collection</li>
+              <li>Analytics</li>
+              <li>Additional responsible-AI modules</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      </details>
+
+    </div>
+  </div>
 </section>
+
+<!-- CAPABILITIES -->
+<section class="capabilities" id="capabilities">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Leadership &amp; Capabilities</p>
+      <h2>Leadership That Connects Vision to Results</h2>
+      <p style="margin-top:16px; font-size:15.5px; color:var(--ink-soft); line-height:1.65;">Andrea combines learning strategy, technology enablement, leadership development, and human-centered design to help organizations prepare people for change.</p>
+    </div>
+    <div class="cap-grid">
+      <div class="cap-block">
+        <span class="cap-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+        <h3>Learning Strategy</h3>
+        <ul class="cap-list">
+          <li>Enterprise learning strategy</li>
+          <li>Program architecture</li>
+          <li>Needs analysis</li>
+          <li>Performance consulting</li>
+        </ul>
+      </div>
+      <div class="cap-block">
+        <span class="cap-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9zM9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></span>
+        <h3>AI &amp; Technology Enablement</h3>
+        <ul class="cap-list">
+          <li>AI workforce readiness</li>
+          <li>Responsible-AI learning</li>
+          <li>Technology adoption</li>
+          <li>Digital transformation</li>
+        </ul>
+      </div>
+      <div class="cap-block">
+        <span class="cap-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3-5.5 7-5.5s7 2.2 7 5.5"/><circle cx="17" cy="8" r="2.4"/><path d="M17 12.5c2.8.2 5 2.2 5 5"/></svg></span>
+        <h3>Leadership Development</h3>
+        <ul class="cap-list">
+          <li>Manager enablement</li>
+          <li>Coaching</li>
+          <li>Leadership learning</li>
+          <li>Facilitation</li>
+        </ul>
+      </div>
+      <div class="cap-block">
+        <span class="cap-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3l4 4-4 4M21 7H8a5 5 0 0 0-5 5M7 21l-4-4 4-4M3 17h13a5 5 0 0 0 5-5"/></svg></span>
+        <h3>Change &amp; Adoption</h3>
+        <ul class="cap-list">
+          <li>Stakeholder engagement</li>
+          <li>Communication strategy</li>
+          <li>Adoption planning</li>
+          <li>Change enablement</li>
+        </ul>
+      </div>
+      <div class="cap-block">
+        <span class="cap-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span>
+        <h3>Experience Design</h3>
+        <ul class="cap-list">
+          <li>Instructional design</li>
+          <li>Microlearning</li>
+          <li>Multimedia development</li>
+          <li>Learner experience</li>
+        </ul>
+      </div>
+      <div class="cap-block">
+        <span class="cap-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M7 20V10M12 20V4M17 20v-7"/></svg></span>
+        <h3>Organizational Performance</h3>
+        <ul class="cap-list">
+          <li>Measurement</li>
+          <li>Continuous improvement</li>
+          <li>Data-informed decisions</li>
+          <li>Business alignment</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section class="series-intro" id="series">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Leadership Perspectives</p>
+      <h2>Six strategic perspectives on modern learning leadership.</h2>
+    </div>
+  </div>
+</section>
+
+<!-- REELS -->
+<div class="wrap">
+
+  <article class="reel reverse" id="video-2" data-index="2">
+    <div class="reel-grid">
+      <div class="reel-media">
+        <div class="media-frame landscape">
+          <video data-track="video-play" controls preload="metadata" poster="assets/video-02-poster.webp" playsinline>
+            <source src="assets/video-02-learning-strategy.mp4" type="video/mp4">
+            Your browser does not support embedded video. <a href="assets/video-02-learning-strategy.mp4">Download the video</a>.
+          </video>
+        </div>
+        <p class="media-caption">Learning Strategy</p>
+      </div>
+      <div class="reel-content">
+        <p class="reel-eyebrow"><b>Learning Strategy</b></p>
+        <h3 class="reel-title">Training is only one possible solution.</h3>
+        <p class="reel-label">Business Challenge</p>
+        <p class="reel-text">Organizations frequently implement training before identifying the true business problem.</p>
+        <p class="reel-label">Demonstrated Competencies</p>
+        <div class="tag-row">
+          <span class="tag">Needs Assessment</span>
+          <span class="tag">Performance Consulting</span>
+          <span class="tag">Learning Strategy</span>
+          <span class="tag">Stakeholder Alignment</span>
+          <span class="tag">Instructional Design</span>
+          <span class="tag">Business Alignment</span>
+        </div>
+        <p class="reel-label">Featured Topics</p>
+        <div class="tag-row">
+          <span class="tag">Performance Analysis</span>
+          <span class="tag">Root Cause Analysis</span>
+          <span class="tag">Business Partnership</span>
+          <span class="tag">Learning Ecosystems</span>
+          <span class="tag">Strategic Alignment</span>
+        </div>
+        <div class="key-message">Learning leaders must first diagnose performance challenges before recommending interventions.</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="reel reverse" id="video-4" data-index="4">
+    <div class="reel-grid">
+      <div class="reel-media">
+        <div class="media-frame landscape">
+          <video data-track="video-play" controls preload="metadata" poster="assets/video-04-poster.webp" playsinline>
+            <source src="assets/video-04-ai-workforce-readiness.mp4" type="video/mp4">
+            Your browser does not support embedded video. <a href="assets/video-04-ai-workforce-readiness.mp4">Download the video</a>.
+          </video>
+        </div>
+        <p class="media-caption">AI Workforce Readiness</p>
+      </div>
+      <div class="reel-content">
+        <p class="reel-eyebrow"><b>AI Workforce Readiness</b></p>
+        <h3 class="reel-title">Technology succeeds when people are prepared.</h3>
+        <p class="reel-label">Business Challenge</p>
+        <p class="reel-text">Artificial Intelligence adoption depends more upon workforce readiness than technology implementation.</p>
+        <p class="reel-label">Demonstrated Competencies</p>
+        <div class="tag-row">
+          <span class="tag">Responsible AI</span>
+          <span class="tag">Digital Transformation</span>
+          <span class="tag">Change Management</span>
+          <span class="tag">Learning Strategy</span>
+          <span class="tag">Technology Adoption</span>
+        </div>
+        <p class="reel-label">Framework</p>
+        <div class="mini-flow">
+          <span class="step">AI Literacy</span><span class="arrow">→</span>
+          <span class="step">Responsible AI</span><span class="arrow">→</span>
+          <span class="step">Change Readiness</span><span class="arrow">→</span>
+          <span class="step">Human-Centered Learning</span><span class="arrow">→</span>
+          <span class="step">Continuous Learning</span><span class="arrow">→</span>
+          <span class="step">Business Innovation</span>
+        </div>
+        <div class="key-message">Technology succeeds when people are prepared.</div>
+      </div>
+    </div>
+  </article>
+
+  <article class="reel" id="video-5" data-index="5">
+    <div class="reel-grid">
+      <div class="reel-media">
+        <div class="media-frame landscape">
+          <video data-track="video-play" controls preload="metadata" poster="assets/video-06-poster.webp" playsinline>
+            <source src="assets/video-06-technology-enablement.mp4" type="video/mp4">
+            Your browser does not support embedded video. <a href="assets/video-06-technology-enablement.mp4">Download the video</a>.
+          </video>
+        </div>
+        <p class="media-caption">Technology Adoption</p>
+      </div>
+      <div class="reel-content">
+        <p class="reel-eyebrow"><b>Technology Adoption</b></p>
+        <h3 class="reel-title">Ecosystems, not isolated training sessions.</h3>
+        <p class="reel-label">Business Challenge</p>
+        <p class="reel-text">Technology implementations frequently fail because adoption strategies are insufficient.</p>
+        <p class="reel-label">Featured CPS Work</p>
+        <div class="tag-row">
+          <span class="tag">Technology Enablement Strategy</span>
+          <span class="tag">Summer Academy</span>
+          <span class="tag">Apple Professional Learning</span>
+          <span class="tag">Jamf Professional Development</span>
+          <span class="tag">Digital Resource Libraries</span>
+          <span class="tag">Coaching Framework</span>
+          <span class="tag">Performance Support</span>
+        </div>
+        <p class="reel-label">Demonstrated Competencies</p>
+        <div class="tag-row">
+          <span class="tag">Enterprise Learning</span>
+          <span class="tag">Technology Adoption</span>
+          <span class="tag">Coaching</span>
+          <span class="tag">Professional Development</span>
+          <span class="tag">Executive Communication</span>
+          <span class="tag">Systems Thinking</span>
+        </div>
+        <div class="key-message">Technology transformation succeeds through structured learning ecosystems — not isolated training sessions.</div>
+      </div>
+    </div>
+  </article>
+
+  <details class="more-videos" id="moreVideos" data-track="more-videos-expand">
+    <summary>View Supporting Perspectives<span class="summary-note">Leadership Philosophy, Coaching and Performance &amp; Strategic Integration</span></summary>
+    <div class="more-videos-inner">
+
+    <article class="reel" id="video-1" data-index="1">
+    <div class="reel-grid">
+      <div class="reel-media">
+        <div class="media-frame landscape">
+          <video data-track="video-play" controls preload="none" poster="assets/video-01-poster.webp" playsinline>
+            <source src="assets/video-01-welcome.mp4" type="video/mp4">
+            Your browser does not support embedded video. <a href="assets/video-01-welcome.mp4">Download the video</a>.
+          </video>
+        </div>
+        <p class="media-caption">Leadership Philosophy</p>
+      </div>
+      <div class="reel-content">
+        <p class="reel-eyebrow"><b>Leadership Philosophy</b></p>
+        <h3 class="reel-title">Who is Andrea Davis-Baptiste?</h3>
+        <p class="reel-label">Purpose</p>
+        <p class="reel-text">Introduce my professional philosophy and establish my executive brand.</p>
+        <p class="reel-label">Demonstrated Competencies</p>
+        <div class="tag-row">
+          <span class="tag">Executive Presence</span>
+          <span class="tag">Professional Communication</span>
+          <span class="tag">Strategic Learning</span>
+          <span class="tag">Personal Brand</span>
+          <span class="tag">Vision</span>
+        </div>
+        <div class="key-message">Learning exists to solve organizational problems — not simply transfer knowledge.</div>
+      </div>
+    </div>
+  </article>
+
+    <article class="reel" id="video-3" data-index="3">
+    <div class="reel-grid">
+      <div class="reel-media">
+        <div class="media-frame landscape">
+          <video data-track="video-play" controls preload="none" poster="assets/video-03-poster.webp" playsinline>
+            <source src="assets/video-03-leadership-development.mp4" type="video/mp4">
+            Your browser does not support embedded video. <a href="assets/video-03-leadership-development.mp4">Download the video</a>.
+          </video>
+        </div>
+        <p class="media-caption">Coaching and Performance</p>
+      </div>
+      <div class="reel-content">
+        <p class="reel-eyebrow"><b>Coaching and Performance</b></p>
+        <h3 class="reel-title">Developing people, not merely managers.</h3>
+        <p class="reel-label">Business Challenge</p>
+        <p class="reel-text">Organizations require leaders capable of navigating continual change.</p>
+        <p class="reel-label">Demonstrated Competencies</p>
+        <div class="tag-row">
+          <span class="tag">Leadership Development</span>
+          <span class="tag">Capability Building</span>
+          <span class="tag">Executive Coaching</span>
+          <span class="tag">Performance Improvement</span>
+          <span class="tag">Change Leadership</span>
+        </div>
+        <p class="reel-label">Leadership Framework</p>
+        <div class="mini-flow">
+          <span class="step">Build Confidence</span><span class="arrow">→</span>
+          <span class="step">Develop Capability</span><span class="arrow">→</span>
+          <span class="step">Inspire Teams</span><span class="arrow">→</span>
+          <span class="step">Drive Performance</span><span class="arrow">→</span>
+          <span class="step">Lead Change</span><span class="arrow">→</span>
+          <span class="step">Achieve Results</span>
+        </div>
+        <div class="key-message">Leadership development strengthens organizational capability by developing people — not merely managers.</div>
+      </div>
+    </div>
+  </article>
+
+    <article class="reel reverse" id="video-6" data-index="6">
+    <div class="reel-grid">
+      <div class="reel-media">
+        <div class="media-frame landscape">
+          <video data-track="video-play" controls preload="none" poster="assets/video-07-poster.webp" playsinline>
+            <source src="assets/video-07-learning-innovation.mp4" type="video/mp4">
+            Your browser does not support embedded video. <a href="assets/video-07-learning-innovation.mp4">Download the video</a>.
+          </video>
+        </div>
+        <p class="media-caption">Strategic Integration</p>
+      </div>
+      <div class="reel-content">
+        <p class="reel-eyebrow"><b>Strategic Integration</b></p>
+        <h3 class="reel-title">How do organizations consistently achieve learning success?</h3>
+        <p class="reel-label">Executive Framework</p>
+        <div class="mini-flow">
+          <span class="step">Business Challenge</span><span class="arrow">→</span>
+          <span class="step">Learning Strategy</span><span class="arrow">→</span>
+          <span class="step">Leadership Enablement</span><span class="arrow">→</span>
+          <span class="step">Technology Adoption</span><span class="arrow">→</span>
+          <span class="step">Performance Improvement</span><span class="arrow">→</span>
+          <span class="step">Business Results</span>
+        </div>
+        <p class="reel-label">Demonstrated Competencies</p>
+        <div class="tag-row">
+          <span class="tag">Executive Thinking</span>
+          <span class="tag">Business Consulting</span>
+          <span class="tag">Learning Leadership</span>
+          <span class="tag">Organizational Development</span>
+          <span class="tag">Strategic Vision</span>
+        </div>
+        <div class="key-message">Learning should never exist independently. It should directly contribute to organizational performance.</div>
+      </div>
+    </div>
+  </article>
+
+    </div>
+  </details>
+
+</div>
+
+<!-- FEATURED PROJECT -->
+<section class="arch" id="framework">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Learning Architecture</p>
+      <h2>One framework. Five strategic stages. One business outcome.</h2>
+      <hr class="arch-divider">
+    </div>
+    <div class="flow" id="archFlow">
+      <div class="flow-stage"><span class="stage-num">1</span><span class="stage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>Business Challenge</div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-stage"><span class="stage-num">2</span><span class="stage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 3v3M12 18v3M21 12h-3M6 12H3"/></svg></span>Learning Strategy</div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-stage"><span class="stage-num">3</span><span class="stage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3-5.5 7-5.5s7 2.2 7 5.5"/><circle cx="17" cy="8" r="2.4"/><path d="M17 12.5c2.8.2 5 2.2 5 5"/></svg></span>Leadership Development</div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-stage"><span class="stage-num">4</span><span class="stage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg></span>Technology Enablement</div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-stage"><span class="stage-num">5</span><span class="stage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5c0 2.2-1 3.3-2 4.3-.7.7-1 1.2-1 2.2v1H10v-1c0-1-.3-1.5-1-2.2-1-1-2-2.1-2-4.3a5 5 0 0 1 5-5z"/><path d="M9.5 21h5M10 18.5h4"/></svg></span>AI Workforce Readiness</div>
+      <span class="flow-arrow">→</span>
+      <div class="flow-stage final"><span class="stage-num">6</span><span class="stage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v4a4 4 0 0 1-8 0V4z"/><path d="M4 6h4M16 6h4M4 6c0 2.5 1.5 4 4 4M20 6c0 2.5-1.5 4-4 4M12 14v3M9 21h6"/></svg></span>Business Performance</div>
+    </div>
+    <p class="arch-caption">Every stage connects learning strategy to organizational performance.</p>
+  </div>
+</section>
+
+<!-- SERIES INTRO -->
+<section class="philosophy" id="philosophy">
+  <div class="wrap">
+    <p class="eyebrow">Learning Philosophy — Core Belief</p>
+    <p class="philosophy-quote">Every learning initiative should begin with a business challenge — not with designing training.</p>
+    <hr class="philosophy-divider">
+    <div class="philosophy-grid">
+      <ul class="philosophy-list">
+        <li>
+          <span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16M7 20V10M12 20V4M17 20v-7"/></svg></span>
+          Improve performance
+        </li>
+        <li>
+          <span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg></span>
+          Increase technology adoption
+        </li>
+        <li>
+          <span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 3-5.5 7-5.5s7 2.2 7 5.5"/><circle cx="17" cy="8" r="2.4"/><path d="M17 12.5c2.8.2 5 2.2 5 5"/></svg></span>
+          Develop leadership capability
+        </li>
+        <li>
+          <span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 7L7 17M7 7v10h10"/></svg></span>
+          Prepare employees for change
+        </li>
+        <li>
+          <span class="p-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c3 3 4.5 6.5 4.5 10a4.5 4.5 0 0 1-9 0c0-3.5 1.5-7 4.5-10z"/><path d="M9 15.5c-2 .8-3 2.2-3 4.5m9-4.5c2 .8 3 2.2 3 4.5"/></svg></span>
+          Accelerate business transformation
+        </li>
+      </ul>
+      <p class="philosophy-close">Learning becomes <b>the strategy</b> — not the product.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section class="vision" id="vision">
+  <div class="wrap">
+    <p class="eyebrow on-dark">Future Vision</p>
+    <p class="vision-text on-dark">Artificial intelligence is reshaping how organizations learn, collaborate, and innovate. The future belongs to organizations that successfully integrate <b>people</b>, <b>technology</b>, <b>leadership</b>, <b>learning</b>, and <b>business strategy</b>.</p>
+    <div class="vision-pillars">
+      <span>People</span>
+      <span>Technology</span>
+      <span>Leadership</span>
+      <span>Learning</span>
+      <span>Business Strategy</span>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED STRATEGY ASSETS -->
+<section class="research" id="research">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Research-Informed Leadership</p>
+      <h2>Research & Thought Leadership</h2>
+    </div>
+    <p class="lead">Andrea's doctoral work strengthens her approach to AI-enabled learning, responsible innovation, leadership, and organizational transformation by connecting research with practical workplace application.</p>
+
+    <div class="research-grid">
+      <div class="research-card">
+        <div class="research-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5c-1.6-1-3.6-1.5-5.5-1.5-.6 0-1 .4-1 1v11c0 .6.4 1 1 1 1.9 0 3.9.5 5.5 1.5 1.6-1 3.6-1.5 5.5-1.5.6 0 1-.4 1-1V6c0-.6-.4-1-1-1-1.9 0-3.9.5-5.5 1.5z"/><path d="M12 6.5v12"/></svg>
+        </div>
+        <h4>Doctoral Study</h4>
+        <p>Doctor of Philosophy (PhD), Leadership — ABD<br>Concordia University Chicago<br>Expected December 2027</p>
+      </div>
+
+      <div class="research-card">
+        <div class="research-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M8.1 7.3 10.3 16M15.9 7.3 13.7 16M8.3 6h7.4"/></svg>
+        </div>
+        <h4>Doctoral Research Focus</h4>
+        <p>Ethical equity in AI-driven personalization within workplace learning.</p>
+        <ul>
+          <li>Responsible AI</li>
+          <li>Human-centered design</li>
+          <li>Adult learning</li>
+          <li>AI governance</li>
+          <li>Organizational adoption</li>
+          <li>Accessibility and employee trust</li>
+        </ul>
+      </div>
+
+      <div class="research-card">
+        <div class="research-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m15.5 8.5-2 5.5-5.5 2 2-5.5z"/></svg>
+        </div>
+        <h4>Research-to-Practice Value</h4>
+        <p>Andrea applies this research to help organizations design AI-enabled learning experiences that balance innovation, employee trust, accessibility, responsible use, workforce readiness, and measurable organizational performance.</p>
+      </div>
+    </div>
+
+    <div class="research-statement">
+      <hr class="rs-divider">
+      <blockquote>&ldquo;Research strengthens the strategy. Practice proves its value.&rdquo;</blockquote>
+      <span class="rs-dot" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
 <!-- CLOSING -->
 <section class="closing" id="connect">
-<div class="wrap closing-inner">
-<p class="eyebrow">Let's Connect</p>
-<p class="lead">I design learning experiences that help people navigate change, build capability, and prepare organizations for what comes next.</p>
-<p>I welcome opportunities to partner with organizations that are committed to building the future of learning through thoughtful strategy, responsible AI, and human-centered design.</p>
-<div class="closing-signature">
-<span class="closing-name">Andrea Davis-Baptiste</span>
-<span class="closing-role">Learning Innovation Leader</span>
-</div>
-<div class="cta-row">
-<a aria-label="Email Andrea Davis-Baptiste" class="btn" href="mailto:andreadavisbaptiste82@gmail.com">Connect With Andrea</a>
-<a aria-label="Download Andrea Davis-Baptiste's résumé" class="btn ghost" download="" href="assets/Andrea-Davis-Baptiste-Resume.pdf">Download Résumé</a>
-<a class="btn ghost" href="#top">Back to Top</a>
-</div>
-</div>
+  <div class="wrap closing-inner">
+    <p class="eyebrow">Let's Connect</p>
+    <p class="lead">I design learning experiences that help people navigate change, build capability, and prepare organizations for what comes next.</p>
+    <p>I welcome opportunities to partner with organizations that are committed to building the future of learning through thoughtful strategy, responsible AI, and human-centered design.</p>
+    <div class="closing-signature">
+      <span class="closing-name">Andrea Davis-Baptiste</span>
+      <span class="closing-role">Enterprise Learning &amp; Workforce Enablement Leader</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn" href="mailto:andreadavisbaptiste82@gmail.com" data-track="email-click" aria-label="Email Andrea Davis-Baptiste">Connect With Andrea</a>
+      <a class="btn ghost" href="assets/Andrea-Davis-Baptiste-Resume.pdf" download data-track="resume-download" aria-label="Download Andrea Davis-Baptiste's résumé">Download Résumé</a>
+      <a class="btn ghost" href="#top">Back to Top</a>
+    </div>
+  </div>
 </section>
+
 <footer>
-<div class="wrap footer-inner">
-<div class="footer-brand">
-<img alt="Andrea Davis-Baptiste ADB logo" class="footer-mark" decoding="async" src="assets/adb-logo.png"/>
-<div class="footer-brand-text">
-<p class="fb-title">Andrea Davis-Baptiste</p>
-<p class="fb-sub">Learning Innovation Leader</p>
-</div>
-</div>
-<div class="footer-meta">
-<span>© 2026 Andrea Davis-Baptiste. All rights reserved.</span>
-<span>Designed with purpose. Built for impact.</span>
-</div>
-<div class="footer-links">
-<a aria-label="Email Andrea Davis-Baptiste" href="mailto:andreadavisbaptiste82@gmail.com">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M3 7l9 6 9-6"></path></svg>
-<span>Email</span>
-</a>
-<a aria-label="View Andrea Davis-Baptiste on LinkedIn" href="https://www.linkedin.com/in/andrea-davis-baptiste" rel="noopener noreferrer" target="_blank">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24"><rect height="18" rx="2" width="18" x="3" y="3"></rect><path d="M7 10v7M7 7v.01M12 17v-4.5a2 2 0 0 1 4 0V17M12 12.5V17"></path></svg>
-<span>LinkedIn</span>
-</a>
-</div>
-</div>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <picture><source type="image/webp" srcset="assets/adb-logo.webp"><img class="footer-mark" src="assets/adb-logo.png" alt="Andrea Davis-Baptiste ADB logo" width="2038" height="465" loading="lazy"></picture>
+      <div class="footer-brand-text">
+        <p class="fb-title">Andrea Davis-Baptiste</p>
+        <p class="fb-sub">Enterprise Learning &amp; Workforce Enablement Leader</p>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <span>&copy; 2026 Andrea Davis-Baptiste. All rights reserved.</span>
+      <span>Designed with purpose. Built for impact.</span>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:andreadavisbaptiste82@gmail.com" data-track="email-click" aria-label="Email Andrea Davis-Baptiste">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <span>Email</span>
+      </a>
+      <a href="https://www.linkedin.com/in/andrea-davis-baptiste" target="_blank" rel="noopener noreferrer" data-track="linkedin-click" aria-label="View Andrea Davis-Baptiste on LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M12 17v-4.5a2 2 0 0 1 4 0V17M12 12.5V17"/></svg>
+        <span>LinkedIn</span>
+      </a>
+    </div>
+  </div>
 </footer>
+
 <script>
   // ---- Spine nav: build dots for each reel ----
   const reels = Array.from(document.querySelectorAll('.reel'));
@@ -2209,7 +2565,7 @@
     btn.dataset.target = reel.id;
     const tip = document.createElement('span');
     tip.className = 'tip';
-    tip.textContent = '0' + idx + ' — ' + (reel.querySelector('.reel-eyebrow b')?.nextSibling?.textContent || '').replace('—','').trim();
+    tip.textContent = '0' + idx + ' — ' + (reel.querySelector('.reel-eyebrow b')?.textContent || '').trim();
     btn.appendChild(tip);
     btn.addEventListener('click', () => {
       document.getElementById(reel.id).scrollIntoView({behavior:'smooth', block:'center'});
@@ -2279,26 +2635,105 @@
       graceVideo.play();
     });
   }
+
+  // ---- Accessible mobile navigation menu ----
+  (function(){
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('toplinks');
+    if(!navToggle || !navMenu) return;
+
+    function closeMenu(){
+      navMenu.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+    }
+    function openMenu(){
+      navMenu.classList.add('is-open');
+      navToggle.setAttribute('aria-expanded', 'true');
+      navToggle.setAttribute('aria-label', 'Close menu');
+    }
+
+    navToggle.addEventListener('click', function(){
+      const isOpen = navMenu.classList.contains('is-open');
+      if(isOpen){ closeMenu(); } else { openMenu(); }
+    });
+
+    navMenu.addEventListener('click', function(e){
+      if(e.target.closest('a')){ closeMenu(); }
+    });
+
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && navMenu.classList.contains('is-open')){
+        closeMenu();
+        navToggle.focus();
+      }
+    });
+
+    document.addEventListener('click', function(e){
+      if(!navMenu.contains(e.target) && !navToggle.contains(e.target)){
+        closeMenu();
+      }
+    });
+
+    window.addEventListener('resize', function(){
+      if(window.innerWidth > 860){ closeMenu(); }
+    });
+  })();
+
+  // ---- LIGHTWEIGHT EVENT TRACKING ----------------------------------------
+  // Sends data-track events through gtag() when (and only when) gtag has been
+  // configured on this page (see the ANALYTICS comment in <head>). If no
+  // analytics tool is installed, every function below simply no-ops — this
+  // script never throws and never blocks the page.
+  (function(){
+    function sendTrackEvent(label, params){
+      if (typeof window.gtag !== 'function') return; // fail safely: analytics not configured
+      try {
+        window.gtag('event', label, params || {});
+      } catch (err) {
+        // fail safely: never let tracking break the page
+      }
+    }
+
+    // Clicks on links/buttons carrying a data-track label
+    // (résumé, strategy-asset view/download, email, LinkedIn, etc.)
+    document.addEventListener('click', function(e){
+      const el = e.target.closest('a[data-track], button[data-track]');
+      if(!el) return;
+      sendTrackEvent(el.getAttribute('data-track'), {
+        event_category: 'engagement',
+        event_label: (el.getAttribute('aria-label') || el.textContent || '').trim().slice(0, 120),
+        link_url: el.getAttribute('href') || ''
+      });
+    });
+
+    // Video plays (all reel videos, the Grace demo, and the responsible-AI prototype)
+    document.querySelectorAll('video[data-track="video-play"]').forEach(function(video){
+      video.addEventListener('play', function(){
+        const label =
+          video.closest('.reel')?.querySelector('.reel-title')?.textContent ||
+          video.getAttribute('aria-label') ||
+          video.id ||
+          'video';
+        sendTrackEvent('video-play', {
+          event_category: 'engagement',
+          event_label: label.trim().slice(0, 120)
+        });
+      });
+    });
+
+    // Expandable sections (Project Case Study, View Supporting Perspectives)
+    document.querySelectorAll('details[data-track]').forEach(function(det){
+      det.addEventListener('toggle', function(){
+        if(!det.open) return; // only track the expand, not the collapse
+        sendTrackEvent(det.getAttribute('data-track'), {
+          event_category: 'engagement',
+          event_label: (det.querySelector('summary')?.textContent || '').trim().slice(0, 120)
+        });
+      });
+    });
+  })();
 </script>
-<script id="mobileNavScript">
-(() => {
-  const toggle = document.getElementById('menuToggle');
-  const menu = document.getElementById('mobileMenu');
-  if (!toggle || !menu) return;
-  const closeMenu = () => {
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-label', 'Open navigation menu');
-    menu.classList.remove('open');
-  };
-  toggle.addEventListener('click', () => {
-    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!isOpen));
-    toggle.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
-    menu.classList.toggle('open', !isOpen);
-  });
-  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
-  document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
-  window.addEventListener('resize', () => { if (window.innerWidth > 860) closeMenu(); });
-})();
-</script></body>
+
+</body>
 </html>
