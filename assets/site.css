@@ -147,16 +147,22 @@
     font-family:var(--mono);
     font-size:14px;
     font-weight:500;
-    letter-spacing:0.08em;
+    letter-spacing:0.04em;
     text-decoration:none;
     color:var(--text-main);
+    min-width:0;
   }
   .brand .nav-logo{
-    height:30px;
+    height:36px;
     width:auto;
     display:block;
+    flex:none;
   }
   .brand b{ color:var(--brand-teal); font-weight:600; }
+  @media (max-width:480px){
+    .brand{ font-size:12px; gap:8px; letter-spacing:0.02em; }
+    .brand .nav-logo{ height:28px; }
+  }
   .toplinks{
     display:flex;
     gap:28px;
@@ -197,7 +203,8 @@
   .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2){ opacity:0; }
   .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
   @media (max-width:860px){
-    .topnav-inner{ position:relative; }
+    .topnav-inner{ position:relative; gap:14px; }
+    .brand{ overflow:hidden; }
     .nav-toggle{ display:flex; }
     .toplinks{
       display:flex;
@@ -304,11 +311,11 @@
     .hero-quote{ margin:22px auto 0; padding-left:16px; }
   }
   .hero h1.hero-name{
-    font-family:var(--display);
-    font-weight:600;
+    font-family:'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-weight:500;
     font-size:clamp(32px, 4.8vw, 54px);
-    line-height:1.06;
-    letter-spacing:-0.015em;
+    line-height:1.1;
+    letter-spacing:-0.005em;
     color:var(--text-main);
     margin:0;
   }
@@ -677,6 +684,15 @@
     .reel.reverse .reel-content{ order:0; }
   }
 
+  .featured-tag{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--page-accent);
+    margin:0 0 8px;
+  }
   .reel-eyebrow{
     font-family:var(--mono);
     font-size:12px;
@@ -1942,3 +1958,105 @@
   .form-fallback h3{ font-size:18px; margin-bottom:10px; }
   .form-fallback p{ color:var(--text-soft); font-size:14.5px; line-height:1.65; margin:0 0 16px; }
   .form-fallback .cta-row{ display:flex; gap:12px; flex-wrap:wrap; }
+
+  /* ============ CREDIBILITY STRIP (K-12) ============ */
+  .credibility-strip{
+    list-style:none;
+    margin:0; padding:0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px 32px;
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:0.02em;
+    color:var(--text-soft);
+  }
+  .credibility-strip li{
+    position:relative;
+    padding-left:18px;
+    line-height:1.5;
+    max-width:280px;
+  }
+  .credibility-strip li::before{
+    content:"";
+    position:absolute;
+    left:0; top:6px;
+    width:6px; height:6px;
+    border-radius:50%;
+    background:var(--page-accent);
+  }
+
+  /* ============ ENGAGEMENT CARDS (Ways to Work Together) ============ */
+  .engagement-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:20px;
+  }
+  .engagement-grid--5{ grid-template-columns:repeat(3, 1fr); }
+  @media (max-width:980px){ .engagement-grid, .engagement-grid--5{ grid-template-columns:1fr 1fr; } }
+  @media (max-width:640px){ .engagement-grid, .engagement-grid--5{ grid-template-columns:1fr; } }
+  .engagement-card{
+    border:1px solid var(--border);
+    border-radius:10px;
+    background:var(--bg-card);
+    padding:22px 22px 24px;
+    transition:border-color .2s ease;
+  }
+  .engagement-card:hover{ border-color:var(--page-accent); }
+  .engagement-card h3{
+    font-family:var(--display);
+    font-size:17px;
+    font-weight:600;
+    color:var(--text-main);
+    margin:0 0 16px;
+    line-height:1.3;
+  }
+  .engagement-meta{ margin:0; }
+  .engagement-meta > div{ margin-bottom:12px; }
+  .engagement-meta > div:last-child{ margin-bottom:0; }
+  .engagement-meta dt{
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--page-accent);
+    margin:0 0 3px;
+  }
+  .engagement-meta dd{
+    font-size:13.5px;
+    color:var(--text-soft);
+    line-height:1.5;
+    margin:0;
+  }
+
+  /* ============ CASE STUDY GROUPS (Challenge / Approach / Outcome) ============ */
+  .case-group{ margin-bottom:28px; }
+  .case-group:last-child{ margin-bottom:0; }
+  .case-group-label{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    font-weight:600;
+    color:var(--page-accent);
+    margin:0 0 14px;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--border);
+  }
+  .case-group .case-block:last-child{ margin-bottom:0; }
+
+  /* ============ CONTACT: PRIMARY DIRECT-CONTACT CARD ============ */
+  .contact-primary-card{
+    border:1px solid var(--border-hover);
+    border-radius:14px;
+    background:var(--bg-card);
+    padding:40px 36px;
+    max-width:680px;
+  }
+  .contact-primary-card h2{
+    font-size:clamp(22px,2.6vw,28px);
+    margin:0 0 4px;
+  }
+  @media (max-width:640px){
+    .contact-primary-card{ padding:28px 24px; }
+  }
