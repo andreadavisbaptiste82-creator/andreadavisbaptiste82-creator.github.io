@@ -1,4 +1,7 @@
 
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const scrollMode = reducedMotion ? 'auto' : 'smooth';
+
   // ---- Spine nav: build dots for each reel (only runs on pages with reels) ----
   const reels = Array.from(document.querySelectorAll('.reel'));
   const spine = document.getElementById('spine');
@@ -14,7 +17,7 @@
       tip.textContent = '0' + idx + ' — ' + (reel.querySelector('.reel-eyebrow b')?.textContent || '').trim();
       btn.appendChild(tip);
       btn.addEventListener('click', () => {
-        document.getElementById(reel.id).scrollIntoView({behavior:'smooth', block:'center'});
+        document.getElementById(reel.id).scrollIntoView({behavior:scrollMode, block:'center'});
       });
       spine.appendChild(btn);
     });
@@ -69,7 +72,7 @@
   if(watchPrototypeBtn && responsibleAiVideo){
     watchPrototypeBtn.addEventListener('click', function(e){
       e.preventDefault();
-      responsibleAiVideo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      responsibleAiVideo.scrollIntoView({ behavior: scrollMode, block: 'center' });
       responsibleAiVideo.play();
     });
   }
@@ -80,7 +83,7 @@
   if(watchGraceBtn && graceVideo){
     watchGraceBtn.addEventListener('click', function(e){
       e.preventDefault();
-      graceVideo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      graceVideo.scrollIntoView({ behavior: scrollMode, block: 'center' });
       graceVideo.play();
     });
   }
