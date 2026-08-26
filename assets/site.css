@@ -2337,3 +2337,63 @@
     .pathway-card{ padding:30px 26px; }
     .page-intro{ padding:54px 0 48px; }
   }
+/* Approved light homepage hero and Corporate button correction */
+.hero {
+  background: #fffdf8 !important;
+  color: #17283f !important;
+  border-bottom: 1px solid #eae3d7;
+}
+
+.hero .eyebrow {
+  color: #9a743a !important;
+}
+
+.hero-role,
+.hero h1.hero-name {
+  color: #17283f !important;
+}
+
+.hero-lede {
+  color: #55616d !important;
+}
+
+.hero-quote {
+  color: #233b5d !important;
+}
+
+.hero-photo::before {
+  border-color: rgba(200, 169, 107, 0.48) !important;
+}
+
+.hero-photo-frame {
+  border-color: #233b5d !important;
+  background: #233b5d !important;
+}
+
+.hero .btn {
+  background: #17283f !important;
+  color: #fffdf8 !important;
+}
+
+.hero .btn:hover {
+  background: #233b5d !important;
+}
+
+.hero .btn.ghost {
+  background: transparent !important;
+  color: #17283f !important;
+  border-color: #a99a83 !important;
+}
+
+body[data-page="corporate"] .page-intro .cta-row .btn.ghost {
+  color: #fffdf8 !important;
+  background: rgba(255, 253, 248, 0.06) !important;
+  border-color: rgba(229, 213, 178, 0.82) !important;
+}
+
+body[data-page="corporate"] .page-intro .cta-row .btn.ghost:hover,
+body[data-page="corporate"] .page-intro .cta-row .btn.ghost:focus-visible {
+  color: #17283f !important;
+  background: #e5d5b2 !important;
+  border-color: #e5d5b2 !important;
+}
