@@ -2397,3 +2397,17 @@ body[data-page="corporate"] .page-intro .cta-row .btn.ghost:focus-visible {
   background: #e5d5b2 !important;
   border-color: #e5d5b2 !important;
 }
+
+  /* Future Ready AI curriculum samples (Featured Resources) */
+  .sample-collection{ margin-top:40px; padding-top:28px; border-top:1px solid var(--line); }
+  .sample-collection h3{ font-family:var(--display); font-size:24px; font-weight:600; margin:0 0 8px; color:var(--text-main); }
+  .sample-collection__intro{ color:var(--text-soft); font-size:15px; line-height:1.6; max-width:760px; margin:0 0 20px; }
+  .sample-collection__note{ color:var(--text-muted); font-size:13px; margin:16px 0 0; }
+  .sample-grid{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; }
+  @media (max-width:1000px){ .sample-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @media (max-width:560px){ .sample-grid{ grid-template-columns:1fr; } }
+  .sample-card{ display:flex; flex-direction:column; }
+  .sample-card__cover{ display:block; margin:0 0 14px; border-radius:6px; overflow:hidden; border:1px solid var(--line); background:#f6efe2; }
+  .sample-card__cover img{ display:block; width:100%; height:auto; aspect-ratio:720/931; object-fit:contain; }
+  .sample-card__cover:focus-visible{ outline:2px solid var(--brand-teal-dark); outline-offset:3px; }
+  .sample-card .nowrap{ white-space:nowrap; }
